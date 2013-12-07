@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Setup>
+            <version>0.1.0</version>
+        </RLM_Setup>
+    </modules>
+    <global>
+        <resources>
+            <rlm_setup_setup>
+                <setup>
+                    <module>RLM_Setup</module>
+                </setup>
+            </rlm_setup_setup>
+        </resources>
+    </global>
+</config>
