@@ -1,3 +1,41 @@
 <?xml version="1.0"?>
 <layout>
+    <default>
+        <remove name="left.permanent.callout"/>
+        <remove name="right.permanent.callout"/>
+        <remove name="paypal.partner.right.logo"/>
+        <remove name="right.reports.product.viewed"/>
+        <remove name="left.newsletter"/>
+        <remove name="catalog.compare.sidebar"/>
+        <remove name="cart_sidebar"/>
+        <remove name="right.poll"/>
+        <remove name="sale.reorder.sidebar"/>
+        <remove name="top.links"/>
+        <remove name="footer_links"/>
+        <remove name="left_smartmenu"/>
+        <remove name="breadcrumbs"/>
+
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/functions.js</name></action>
+        </reference>
+
+        <reference name="header">
+            <block type="scandi_menumanager/menu" name="main.menu">
+                <action method="setMenuId"><menu_id>main_menu</menu_id></action>
+            </block>
+        </reference>
+    </default>
+
+    <wordpress_default>
+        <reference name="root">
+            <action method="setTemplate"><name>page/1column.phtml</name></action>
+        </reference>
+    </wordpress_default>
+
+    <cms_index_index>
+        <reference name="head">
+            <action method="addItem"><type>skin_js</type><name>js/jquery.cycle.all.js</name></action>
+        </reference>
+    </cms_index_index>
 </layout>

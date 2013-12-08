@@ -1,0 +1,41 @@
+/**
+ * Scandi_MenuManager
+ *
+ * @category Scandi
+ * @package Scandi_MenuManager
+ * @author Scandiweb <info@scandiweb.com>
+ * @copyright Copyright (c) 2013 Scandiweb, Ltd (http://scandiweb.com)
+ * @license http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+
+/* Global Style */
+.menu-manager-menu { margin-bottom:15px; }
+.menu-manager-menu li.active > a { text-decoration:none; }
+
+/* Type : None */
+.menu-type-none,
+.menu-type-none ul,
+.menu-type-none li { display:inline; }
+.menu-type-none li a span,
+.menu-type-none li span span { padding-right:5px; }
+
+/* Type : Vertical */
+.menu-type-vertical ul { padding-left:15px; }
+
+/* Type : Horizontal */
+.menu-type-horizontal { position:relative; z-index:100; float:left; margin-left:54px; margin-top:13px; }
+.menu-type-horizontal li.level0 { display:inline; margin-right:32px;}
+.menu-type-horizontal li.level0.last {}
+.menu-type-horizontal li { border:2px solid transparent; border-width:0 2px; display:block; position:relative; padding:30px 10px 19px; background:transparent; font-size:22px; }
+.menu-type-horizontal > li:hover { border:2px solid #777; border-width:0 2px; }
+.menu-type-horizontal > li:hover > a { color:#414141; }
+
+.menu-type-horizontal li.title { cursor:default; }
+
+.menu-type-horizontal ul { position:absolute; left:-1px; top:100%; margin-left:-1px; background:#fff; width:162px; display:none; }
+.menu-type-horizontal ul li { padding:0; border:none; font-size:18px; border:2px solid #777; border-top:0; }
+.menu-type-horizontal ul li a { padding:8px 10px; display:block; }
+.menu-type-horizontal ul li a:hover { background:#e4e4e4; }
+.menu-type-horizontal ul li.last {}
+.menu-type-horizontal li.level1 ul { left:50%; top:70%; }
+.menu-type-horizontal li:hover > ul { display:block; }

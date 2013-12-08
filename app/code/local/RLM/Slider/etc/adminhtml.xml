@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<config>
+    <menu>
+        <rlm_slider translate="title" module="rlm_slider">
+            <title>RLM Slider</title>
+            <sort_order>100</sort_order>
+            <children>
+                <slides translate="title" module="rlm_slider">
+                    <title>Slides</title>
+                    <action>adminhtml/slider/index</action>
+                    <sort_order>1</sort_order>
+                </slides>
+            </children>
+        </rlm_slider>
+    </menu>
+    <acl>
+        <resources>
+            <admin>
+                <children>
+                    <rlm_slider translate="title" module="rlm_slider">
+                        <title>RLM Slider</title>
+                        <sort_order>0</sort_order>
+                        <children>
+                            <slides translate="title" module="rlm_slider">
+                                <title>Slides</title>
+                                <sort_order>1</sort_order>
+                            </slides>
+                        </children>
+                    </rlm_slider>
+                </children>
+            </admin>
+        </resources>
+    </acl>
+</config>

@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Slider>
+            <active>true</active>
+            <codePool>local</codePool>
+        </RLM_Slider>
+    </modules>
+</config>

@@ -6,12 +6,12 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
-body          { background:#fff; font:12px/1.35 Arial, Helvetica, sans-serif; color:#000; text-align:center; }
+body          { background:#fff; font:12px/1.35 Arial, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
-a             { color:#05c; text-decoration:underline; }
-a:hover       { text-decoration:none; }
+a             { color:#707070; text-decoration:none; }
+a:hover       { text-decoration:none; color:#414141; }
 :focus        { outline:0; }
 
 /* Headings */
@@ -66,10 +66,45 @@ ul,ol         { list-style:none; }
 .no-bg        { background:none !important; }
 /* ======================================================================================= */
 
+/* Fonts ================================================================================= */
+@font-face {
+    font-family: 'Raleway Extrabold';
+    src: url('../fonts/Raleway ExtraBold/raleway-extrabold-webfont.eot');
+    src: url('../fonts/Raleway ExtraBold/raleway-extrabold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Raleway ExtraBold/raleway-extrabold-webfont.woff') format('woff'),
+    url('../fonts/Raleway ExtraBold/raleway-extrabold-webfont.ttf') format('truetype'),
+    url('../fonts/Raleway ExtraBold/raleway-extrabold-webfont.svg#ralewayextrabold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway Bold';
+    src: url('../fonts/Raleway Bold/raleway-bold-webfont.eot');
+    src: url('../fonts/Raleway Bold/raleway-bold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Raleway Bold/raleway-bold-webfont.woff') format('woff'),
+    url('../fonts/Raleway Bold/raleway-bold-webfont.ttf') format('truetype'),
+    url('../fonts/Raleway Bold/raleway-bold-webfont.svg#ralewaybold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway SemiBold';
+    src: url('../fonts/Raleway SemiBold/raleway-semibold-webfont.eot');
+    src: url('../fonts/Raleway SemiBold/raleway-semibold-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Raleway SemiBold/raleway-semibold-webfont.woff') format('woff'),
+    url('../fonts/Raleway SemiBold/raleway-semibold-webfont.ttf') format('truetype'),
+    url('../fonts/Raleway SemiBold/raleway-semibold-webfont.svg#ralewaysemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+/* ======================================================================================= */
 
 /* Layout ================================================================================ */
 .wrapper {}
-.page { width:1000px; margin:0 auto; padding:10px 0; text-align:left; }
+.page { text-align:left; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
@@ -418,7 +453,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* Header ================================================================================ */
 .logo { float:left; }
 .header-container {}
-.header { padding:10px; }
+.header { padding:13px 20px 0 20px; text-transform:uppercase; border-bottom:2px solid #777; }
 .header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
 .header h1.logo { margin:0; padding:0; }
@@ -1232,4 +1267,8 @@ tr.summary-details-excluded { font-style:italic; }
 .advanced-search-summary:after,
 .gift-messages-form .item:after,
 .send-friend .form-list li p:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
+/* ======================================================================================= */
+
+/* Custom fonts ========================================================================== */
+body, .header { font-family:'Raleway SemiBold'; }
 /* ======================================================================================= */

@@ -1,0 +1,53 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Slider>
+            <version>0.1.0</version>
+        </RLM_Slider>
+    </modules>
+    <global>
+        <models>
+            <rlm_slider>
+                <class>RLM_Slider_Model</class>
+                <resourceModel>rlm_slider_resource</resourceModel>
+            </rlm_slider>
+            <rlm_slider_resource>
+                <class>RLM_Slider_Model_Resource</class>
+                <entities>
+                    <slides>
+                        <table>rlm_slider_slides</table>
+                    </slides>
+                </entities>
+            </rlm_slider_resource>
+        </models>
+        <blocks>
+            <rlm_slider>
+                <class>RLM_Slider_Block</class>
+            </rlm_slider>
+        </blocks>
+        <helpers>
+            <rlm_slider>
+                <class>RLM_Slider_Helper</class>
+            </rlm_slider>
+        </helpers>
+        <resources>
+            <rlm_slider_setup>
+                <setup>
+                    <module>RLM_Slider</module>
+                </setup>
+            </rlm_slider_setup>
+        </resources>
+    </global>
+
+    <admin>
+        <routers>
+            <adminhtml>
+                <args>
+                    <modules>
+                        <gridmodule before="Mage_Adminhtml">RLM_Slider_Adminhtml</gridmodule>
+                    </modules>
+                </args>
+            </adminhtml>
+        </routers>
+    </admin>
+</config>

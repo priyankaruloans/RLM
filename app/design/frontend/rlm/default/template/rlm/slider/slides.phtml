@@ -1,0 +1,12 @@
+<?php
+/**
+ * @see RLM_Slider_Block_Slides
+ * @var $this RLM_Slider_Block_Slides
+ */
+?>
+
+<ul class="slider">
+    <?php foreach ($this->getSlides() as $slide): ?>
+        <li><img src="<?php echo $this->getSlideUrl($slide); ?>" alt="<?php echo $slide->getTitle(); ?>" /></li>
+    <?php endforeach; ?>
+</ul>
