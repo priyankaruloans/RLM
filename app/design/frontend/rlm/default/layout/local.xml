@@ -43,7 +43,7 @@
             <block type="core/template" name="overflow-container" template="page/homepage/overflow.phtml">
                 <block type="scandi_cms/block" name="delivery_info">
                     <action method="setBlockClass"><class>delivery_info popup</class></action>
-                    <action method="setBlockId"><bloc_id>delivery_info</bloc_id></action>
+                    <action method="setBlockId"><block_id>delivery_info</block_id></action>
                 </block>
 
                 <block type="core/template" name="contact.us" template="contacts/form.phtml" />
