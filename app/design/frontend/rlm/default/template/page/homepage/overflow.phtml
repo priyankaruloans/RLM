@@ -1,0 +1,15 @@
+<?php
+/**
+ * Home page container for hiden forms like delivery info and contanct us
+ *
+ * @see Mage_Core_Block_Template
+ */
+?>
+
+<div class="overflow-bg"></div>
+
+<?php echo $this->getChildHtml('delivery_info') ?>
+
+<div class="popup contact_us">
+    <?php echo $this->getChildHtml('contact.us') ?>
+</div>

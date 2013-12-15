@@ -24,7 +24,7 @@
 
 /* Type : Horizontal */
 .menu-type-horizontal { position:relative; z-index:100; float:left; margin-left:54px; margin-top:13px; }
-.menu-type-horizontal li.level0 { display:inline; margin-right:32px;}
+.menu-type-horizontal li.level0 { display:inline; margin-right:28px;}
 .menu-type-horizontal li.level0.last {}
 .menu-type-horizontal li { border:2px solid transparent; border-width:0 2px; display:block; position:relative; padding:30px 10px 19px; background:transparent; font-size:22px; }
 .menu-type-horizontal > li:hover { border:2px solid #777; border-width:0 2px; }

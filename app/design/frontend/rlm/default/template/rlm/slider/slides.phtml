@@ -10,3 +10,9 @@
         <li><img src="<?php echo $this->getSlideUrl($slide); ?>" alt="<?php echo $slide->getTitle(); ?>" /></li>
     <?php endforeach; ?>
 </ul>
+
+<script type="text/javascript">
+    jQuery('document').ready(function() {
+        jQuery('.slider').cycle({fx: 'scrollLeft'});
+    });
+</script>

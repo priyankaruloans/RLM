@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Scandi_Cms>
+            <version>0.1.0</version>
+        </Scandi_Cms>
+    </modules>
+    <global>
+        <blocks>
+            <scandi_cms>
+                <class>Scandi_Cms_Block</class>
+            </scandi_cms>
+        </blocks>
+    </global>
+</config>
