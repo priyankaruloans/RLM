@@ -1,0 +1,25 @@
+/* CMS Home Page */
+.cms-home .subtitle {}
+.cms-index-index .subtitle {}
+
+/* Home page overflow container */
+.overflow-bg { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#515151; opacity:0.5; z-index:999; }
+
+/* Popup general styles */
+.popup { display:none; top:100px; position:absolute; width:100%; margin:0 auto; z-index:1000; }
+.popup { position:absolute; width:640px; margin-left:-350px; left:50%; padding:30px; background:#fff; }
+.popup p,
+.popup strong { font-size:16px; }
+.popup strong { margin:20px 0 5px 0; display:block; }
+.popup div { margin-top:20px; display:block; }
+.popup .close { position:absolute; top:20px; right:20px; cursor:pointer; background:url('../images/close.png') no-repeat; width:16px; height:16px; display:block; }
+
+.popup.contact_us { width:418px; margin-left:-239px; }
+.popup.contact_us .page-title { margin:0; padding:0; }
+.popup.contact_us .fieldset { margin:0; padding:0; }
+.popup.contact_us label { font-size:18px; margin-bottom:2px; }
+.popup.contact_us .field { margin-top:15px; }
+.popup.contact_us .wide { margin-top:15px; }
+.popup.contact_us textarea { width:404px !important; }
+.popup.contact_us .buttons-set { padding:0; }
+.popup.contact_us .buttons-set button { float:left; }

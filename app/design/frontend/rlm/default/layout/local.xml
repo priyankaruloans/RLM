@@ -35,6 +35,7 @@
 
     <cms_index_index>
         <reference name="head">
+            <action method="addItem"><type>skin_css</type><name>css/homepage.css</name></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery.cycle.all.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/rlm_slider.css</name></action>
         </reference>
