@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scandiweb - creating a cheesy future
+ *
+ * Scandi_VisualAttributes
+ *
+ * @category    Scandi
+ * @package     Scandi_VisualAttributes
+ * @author      Scandiweb.com <info@scandiweb.com>
+ * @copyright   Copyright (c) 2013 Scandiweb.com (http://www.scandiweb.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<layout version="0.1.0">
+    <adminhtml_catalog_product_attribute_edit>
+        <reference name="head">
+            <action method="addJs">
+                <name>scandi/visualattributes/upload.js</name>
+            </action>
+        </reference>
+    </adminhtml_catalog_product_attribute_edit>
+</layout>

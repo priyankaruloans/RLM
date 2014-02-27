@@ -1,0 +1,31 @@
+/**
+ * Scandiweb - creating a better future
+ *
+ * Scandi_VisualAttributes
+ *
+ * @category    Scandi
+ * @package     Scandi_VisualAttributes
+ * @author      Scandiweb.com <info@scandiweb.com>
+ * @copyright   Copyright (c) 2013 Scandiweb.com (http://www.scandiweb.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+
+/**
+ * Generic styles to display extension features properly
+ */
+
+/* Product view selector styles */
+.image-select { width:100%; /* IE7 compatibility */ }
+.image-select .image-option-container { float:left; display:inline-block; margin:2px; border:#000 2px solid; background:#000; color:#fff; }
+.image-select .image-option-container:hover { cursor:pointer; }
+.image-select .image-option-container.active { border-color:#ee0000; }
+.image-select .image-option-container.disabled:hover { cursor:inherit; }
+.image-select .image-option-container.disabled img { opacity:0.5; filter: alpha(opacity=50); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; }
+.image-select .image-option-container.empty { text-align:center; background:#555; }
+.image-select .image-option-container.empty span { padding:4px; }
+
+/* Layered navigation image styles */
+.filter-item-image { display:inline-block; margin:2px 0;}
+
+/* Clearer class */
+.clear-after:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }

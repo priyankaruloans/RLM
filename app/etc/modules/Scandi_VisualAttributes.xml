@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scandiweb - creating a better future
+ *
+ * Scandi_VisualAttributes
+ *
+ * @category    Scandi
+ * @package     Scandi_VisualAttributes
+ * @author      Scandiweb.com <info@scandiweb.com>
+ * @copyright   Copyright (c) 2013 Scandiweb.com (http://www.scandiweb.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Scandi_VisualAttributes>
+            <active>true</active>
+            <codePool>local</codePool>
+            <depends>
+                <Mage_Catalog/>
+            </depends>
+        </Scandi_VisualAttributes>
+    </modules>
+</config>

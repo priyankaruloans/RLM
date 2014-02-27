@@ -1,0 +1,45 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scandiweb - creating a better future
+ *
+ * Scandi_VisualAttributes
+ *
+ * @category    Scandi
+ * @package     Scandi_VisualAttributes
+ * @author      Scandiweb.com <info@scandiweb.com>
+ * @copyright   Copyright (c) 2013 Scandiweb.com (http://www.scandiweb.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<layout version="0.1.0">
+
+    <PRODUCT_TYPE_configurable>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_js</type>
+                <name>scandi/visualattributes/js/visualattributes.js</name>
+            </action>
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>scandi/visualattributes/css/visualattributes.css</name>
+            </action>
+        </reference>
+        <reference name="product.info.options.configurable">
+            <block type="core/text_list" name="js.templates">
+                <block type="core/template" name="containerTemplate" template="scandi/visualattributes/js/container.phtml"/>
+                <block type="core/template" name="itemTemplate" template="scandi/visualattributes/js/option.phtml"/>
+                <block type="core/template" name="emptyItemTemplate" template="scandi/visualattributes/js/option/empty.phtml"/>
+            </block>
+        </reference>
+    </PRODUCT_TYPE_configurable>
+
+    <catalog_category_layered>
+        <reference name="head">
+            <action method="addItem">
+                <type>skin_css</type>
+                <name>scandi/visualattributes/css/visualattributes.css</name>
+            </action>
+        </reference>
+    </catalog_category_layered>
+</layout>

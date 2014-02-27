@@ -1,0 +1,106 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Scandiweb - creating a better future
+ *
+ * Scandi_VisualAttributes
+ *
+ * @category    Scandi
+ * @package     Scandi_VisualAttributes
+ * @author      Scandiweb.com <info@scandiweb.com>
+ * @copyright   Copyright (c) 2013 Scandiweb.com (http://www.scandiweb.com)
+ * @license     http://opensource.org/licenses/afl-3.0.php Academic Free License (AFL 3.0)
+ */
+-->
+<config>
+    <modules>
+        <Scandi_VisualAttributes>
+            <version>0.0.1</version>
+        </Scandi_VisualAttributes>
+    </modules>
+
+    <global>
+        <blocks>
+            <scandi_visualattributes>
+                <class>Scandi_VisualAttributes_Block</class>
+            </scandi_visualattributes>
+            <adminhtml>
+                <rewrite>
+                    <catalog_product_attribute_edit_form>Scandi_VisualAttributes_Block_Adminhtml_Catalog_Product_Attribute_Edit_Form</catalog_product_attribute_edit_form>
+                </rewrite>
+            </adminhtml>
+            <catalog>
+                <rewrite>
+                    <product_view_type_configurable>Scandi_VisualAttributes_Block_Catalog_Product_View_Type_Configurable</product_view_type_configurable>
+                    <layer_filter_attribute>Scandi_VisualAttributes_Block_Catalog_Layer_Filter_Attribute</layer_filter_attribute>
+                </rewrite>
+            </catalog>
+        </blocks>
+
+        <helpers>
+            <scandi_visualattributes>
+                <class>Scandi_VisualAttributes_Helper</class>
+            </scandi_visualattributes>
+        </helpers>
+
+        <resources>
+            <visualattributes_setup>
+                <setup>
+                    <module>Scandi_VisualAttributes</module>
+                </setup>
+            </visualattributes_setup>
+        </resources>
+        <models>
+            <eav_resource>
+                <rewrite>
+                    <entity_attribute_option_collection>Scandi_VisualAttributes_Model_Resource_Eav_Entity_Attribute_Option_Collection</entity_attribute_option_collection>
+                </rewrite>
+            </eav_resource>
+            <catalog>
+                <rewrite>
+                    <layer_filter_attribute>Scandi_VisualAttributes_Model_Catalog_Layer_Filter_Attribute</layer_filter_attribute>
+                </rewrite>
+            </catalog>
+        </models>
+    </global>
+
+    <frontend>
+        <layout>
+            <updates>
+                <scandi_visualattributes>
+                    <file>scandi_visualattributes.xml</file>
+                </scandi_visualattributes>
+            </updates>
+        </layout>
+    </frontend>
+
+    <adminhtml>
+        <events>
+            <core_block_abstract_to_html_before>
+                <observers>
+                    <scandi_visualattributes>
+                        <class>Scandi_VisualAttributes_Model_Observer</class>
+                        <type>singleton</type>
+                        <method>addImagesTab</method>
+                    </scandi_visualattributes>
+                </observers>
+            </core_block_abstract_to_html_before>
+            <controller_action_postdispatch_adminhtml_catalog_product_attribute_save>
+                <observers>
+                    <scandi_visualattributes>
+                        <class>Scandi_VisualAttributes_Model_Observer</class>
+                        <type>singleton</type>
+                        <method>processImages</method>
+                    </scandi_visualattributes>
+                </observers>
+            </controller_action_postdispatch_adminhtml_catalog_product_attribute_save>
+        </events>
+        <layout>
+            <updates>
+                <scandi_visualattributes>
+                    <file>scandi_visualattributes.xml</file>
+                </scandi_visualattributes>
+            </updates>
+        </layout>
+    </adminhtml>
+</config>
