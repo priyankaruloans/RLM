@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Helper>
+            <version>0.1.0</version>
+        </RLM_Helper>
+    </modules>
+    <global>
+        <helpers>
+            <rlm_helper>
+                <class>RLM_Helper_Helper</class>
+            </rlm_helper>
+        </helpers>
+    </global>
+</config>

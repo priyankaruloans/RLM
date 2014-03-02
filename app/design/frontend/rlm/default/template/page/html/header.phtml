@@ -27,6 +27,12 @@
  * @var Mage_Page_Block_Html_Header $this
  */
 ?>
+
+<?php
+    /* @var $rlm RLM_Helper_Helper_Data */
+    $rlm = Mage::helper('rlm_helper');
+?>
+
 <div class="header-container">
     <div class="header">
         <?php if ($this->getIsHomePage()):?>
@@ -35,7 +41,18 @@
         <a href="<?php echo $this->getUrl('') ?>" title="<?php echo $this->getLogoAlt() ?>" class="logo"><strong><?php echo $this->getLogoAlt() ?></strong><img src="<?php echo $this->getLogoSrc() ?>" alt="<?php echo $this->getLogoAlt() ?>" /></a>
         <?php endif?>
         <?php echo $this->getChildHtml('main.menu') ?>
-        <div class="quick-access">
-        </div>
+        <ul class="my-account menu-type-horizontal">
+            <li class="level0"><a href="#"><?php echo $this->__('Account') ?></a>
+                <ul>
+                    <li><a href="<?php echo $rlm->getCartUrl() ?>"><?php echo $this->__('Cart [ %s ]', $rlm->getCartItemsCount()) ?></a></li>
+                    <li><a href="<?php echo $rlm->getSettingsUrl() ?>"><?php echo $this->__('Settings') ?></a></li>
+                    <?php $linkData = $rlm->getLoginLogoutLink() ?>
+                    <li><a href="<?php echo $linkData['url'] ?>"><?php echo $linkData['title'] ?></a></li>
+                </ul>
+            </li>
+        </ul>
+        <a href="" class="hide-button"></a>
     </div>
 </div>
+
+<a href="#" class="show-menu"></a>

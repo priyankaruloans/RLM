@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Helper>
+            <active>true</active>
+            <codePool>local</codePool>
+        </RLM_Helper>
+    </modules>
+</config>

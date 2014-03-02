@@ -1,6 +1,7 @@
 /* CMS Home Page */
 .cms-home .subtitle {}
 .cms-index-index .subtitle {}
+.cms-index-index .header-container { background:rgba(0,0,0, 0.4); position:absolute; z-index:99999; top:-100px; left:0; width:100%; }
 
 /* Home page overflow container */
 .overflow-bg { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#515151; opacity:0.5; z-index:999; }
