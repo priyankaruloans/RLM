@@ -1,6 +1,6 @@
 <?php
 /**
- * Home page container for hiden forms like delivery info and contanct us
+ * Home page container for hiden forms sign in/register/reset pass
  *
  * @see Mage_Core_Block_Template
  */
@@ -8,8 +8,19 @@
 
 <div class="overflow-bg"></div>
 
-<?php echo $this->getChildHtml('delivery_info') ?>
+<div id="sign_in" class="sign-in popup">
+    <span class="close"></span>
+    sign in
+    <a id="forgot-password" href="#"><?php echo $this->__('Forgot password?') ?></a>
+    <a id="create-new" href="#"><?php echo $this->__('Create new account') ?></a>
+</div>
 
-<div class="popup contact_us">
-    <?php echo $this->getChildHtml('contact.us') ?>
+<div id="create_new" class="create-new popup">
+    <span class="close"></span>
+    create new
+</div>
+
+<div id="reset-pass" class="reset-pass popup">
+    <span class="close"></span>
+    reset pass
 </div>

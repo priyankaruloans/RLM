@@ -44,10 +44,10 @@
         <ul class="my-account menu-type-horizontal">
             <li class="level0"><a href="#"><?php echo $this->__('Account') ?></a>
                 <ul>
-                    <li><a href="<?php echo $rlm->getCartUrl() ?>"><?php echo $this->__('Cart [ %s ]', $rlm->getCartItemsCount()) ?></a></li>
-                    <li><a href="<?php echo $rlm->getSettingsUrl() ?>"><?php echo $this->__('Settings') ?></a></li>
+                    <li class="top-cart"><a href="<?php echo $rlm->getCartUrl() ?>"><?php echo $this->__('Cart [ %s ]', $rlm->getCartItemsCount()) ?></a></li>
+                    <li class="top-settings"><a href="<?php echo $rlm->getSettingsUrl() ?>"><?php echo $this->__('Settings') ?></a></li>
                     <?php $linkData = $rlm->getLoginLogoutLink() ?>
-                    <li><a href="<?php echo $linkData['url'] ?>"><?php echo $linkData['title'] ?></a></li>
+                    <li class="top-my-account"><a href="<?php echo $linkData['url'] ?>"><?php echo $linkData['title'] ?></a></li>
                 </ul>
             </li>
         </ul>

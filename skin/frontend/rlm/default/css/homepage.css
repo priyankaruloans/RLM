@@ -4,10 +4,10 @@
 .cms-index-index .header-container { background:rgba(0,0,0, 0.4); position:absolute; z-index:99999; top:-100px; left:0; width:100%; }
 
 /* Home page overflow container */
-.overflow-bg { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#515151; opacity:0.5; z-index:999; }
+.overflow-bg { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#515151; opacity:0.5; z-index:999999; }
 
 /* Popup general styles */
-.popup { display:none; top:100px; position:absolute; width:100%; margin:0 auto; z-index:1000; }
+.popup { display:none; top:100px; position:absolute; width:100%; margin:0 auto; z-index:1000000; }
 .popup { position:absolute; width:640px; margin-left:-350px; left:50%; padding:30px; background:#fff; }
 .popup p,
 .popup strong { font-size:16px; }
@@ -24,3 +24,8 @@
 .popup.contact_us textarea { width:404px !important; }
 .popup.contact_us .buttons-set { padding:0; }
 .popup.contact_us .buttons-set button { float:left; }
+
+.hide-button { background:url('../images/hide-menu.png'); position:absolute; right:10px; top:13px; display:block; height:32px; width:32px; }
+.show-menu { z-index:99999; background:url('../images/show-menu.png'); display:block; position:absolute; right:0; top:0; width:50px; height:50px; }
+
+.menu-type-horizontal ul { background:rgba(0,0,0, 0.4); }

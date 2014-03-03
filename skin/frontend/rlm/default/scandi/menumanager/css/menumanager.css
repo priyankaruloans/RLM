@@ -23,6 +23,7 @@
 .menu-type-vertical ul { padding-left:15px; }
 
 /* Type : Horizontal */
+.menu-type-horizontal li a { color:#fff !important; }
 .menu-type-horizontal { position:relative; z-index:100; float:left; margin-left:88px; margin-top:18px; }
 .menu-type-horizontal li.level0 { display:inline; margin-right:32px; border-bottom: 4px solid transparent; }
 .menu-type-horizontal li.level0:hover { border-bottom-color:#fff; }
@@ -34,7 +35,7 @@
 
 .menu-type-horizontal li.title { cursor:default; }
 
-.menu-type-horizontal ul { padding-bottom:8px; position:absolute; border-top:4px solid transparent; top:64px; background:rgba(0,0,0, 0.4); width:128px; display:none; }
+.menu-type-horizontal ul { padding-bottom:8px; position:absolute; border-top:4px solid transparent; top:64px; background:rgba(0,0,0, 0.7); width:128px; display:none; }
 .menu-type-horizontal ul li { padding:0; border:none; font-size:18px; border-top:0; font-size:16px; font-weight:normal; }
 .menu-type-horizontal ul li a { padding:2px 10px; display:block; }
 .menu-type-horizontal ul li.last {}
@@ -42,6 +43,3 @@
 .menu-type-horizontal li:hover > ul { display:block; }
 
 .my-account { margin-left: 3px; border-left: 2px solid #fff; padding-left: 34px; }
-
-.hide-button { background:url('../../../images/hide-menu.png'); position:absolute; right:10px; top:13px; display:block; height:32px; width:32px; }
-.show-menu { z-index:99999; background:url('../../../images/show-menu.png'); display:block; position:absolute; right:0; top:0; width:50px; height:50px; }

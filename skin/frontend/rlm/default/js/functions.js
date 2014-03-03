@@ -1,66 +1,73 @@
-function Popup () {}
+function Popup (clicked, popup, background, close) {
+    var $this  = this;
 
-Popup.prototype.init = function (clicked, popup, background, close) {
     clicked    = jQuery(clicked);
     popup      = jQuery(popup);
-    background = jQuery(background);
-    close      = jQuery(close);
+    background = background !== undefined ? jQuery(background) : jQuery('.overflow-bg');
+    close      = close      !== undefined ? jQuery(close)      : jQuery('.close');
 
-    clicked.click(function (e) {
-        e.preventDefault();
+    this.init = function () {
+        clicked.click(function (e) {
+            e.preventDefault();
+            jQuery('.popup').hide();
 
-        background.show();
-        popup.fadeIn();
-    });
+            background.show();
+            popup.fadeIn();
+        });
 
-    popup.find(close).click(function () {
+        popup.find(close).click(function () {
+            $this.close();
+        });
+
+        background.click(function () {
+            $this.close();
+        });
+    };
+
+    this.close = function () {
         popup.fadeOut(function () { background.hide() });
-    });
+    };
 
-    background.click(function () {
-        popup.find(close).trigger('click');
-    });
-};
+    this.init();
+}
 
-function TopMenu () {}
+function TopMenu (topMenu, topMenuShow) {
+    this.init = function () {
+        topMenu = jQuery(topMenu);
+        topMenuShow = jQuery(topMenuShow);
+        var speed = 500;
 
-TopMenu.prototype.init = function (topMenu, topMenuShow) {
-    topMenu = jQuery(topMenu);
-    topMenuShow = jQuery(topMenuShow);
-    var speed = 500;
+        topMenu.find('.hide-button').click(function (e) {
+            e.preventDefault();
 
-    topMenu.find('.hide-button').click(function (e) {
-        e.preventDefault();
-
-        topMenu.animate({
-            top: '-100px'
-        }, speed, function () {
-            topMenuShow.animate({
-                top: '0'
-            }, speed)
-        });
-    });
-
-    topMenuShow.click(function (e) {
-        e.preventDefault();
-
-        topMenuShow.animate({
-            top: '-100px'
-        }, speed, function () {
             topMenu.animate({
-                top: '0'
-            }, speed)
+                top: '-100px'
+            }, speed, function () {
+                topMenuShow.animate({
+                    top: '0'
+                }, speed)
+            });
         });
-    });
-};
+
+        topMenuShow.click(function (e) {
+            e.preventDefault();
+
+            topMenuShow.animate({
+                top: '-100px'
+            }, speed, function () {
+                topMenu.animate({
+                    top: '0'
+                }, speed)
+            });
+        });
+    };
+
+    this.init();
+}
 
 jQuery('document').ready(function () {
-    var deliveryInfo = new Popup();
-    deliveryInfo.init('li.delivery-info a', '.popup.delivery_info', '.overflow-bg', '.close');
-
-    var contactUsForm = new Popup();
-    contactUsForm.init('li.contact a', '.popup.contact_us', '.overflow-bg', '.close');
-
-    var topMenu = new TopMenu();
-    topMenu.init('.header-container', '.show-menu');
+    var myAccount  = new Popup('li.top-my-account a', '#sign_in');
+    var forgotPass = new Popup('#forgot-password', '#reset-pass');
+    var createNew  = new Popup('#create-new', '#create_new');
+    var topMenu    = new TopMenu('.header-container', '.show-menu');
 });
