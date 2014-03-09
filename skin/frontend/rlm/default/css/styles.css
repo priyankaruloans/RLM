@@ -138,7 +138,7 @@ ul,ol         { list-style:none; }
 
 /* Global Styles ========================================================================= */
 /* Form Elements */
-input,select,textarea,button { font:12px Arial, Helvetica, sans-serif; vertical-align:middle; color:#000; }
+input,select,textarea,button { font:12px Asap, Helvetica, sans-serif; vertical-align:middle; color:#000; }
 input.input-text,select,textarea { background:#fff; }
 input.input-text,textarea { padding:2px; border:2px solid #525252; resize:none; }
 select { padding:1px; }
@@ -150,11 +150,23 @@ input.radio { margin-right:3px; }
 input.checkbox { margin-right:3px; }
 input.qty { width:2.5em !important; }
 
+input.validation-passed { border:2px solid #359c5e !important; background:#fff !important; }
+input.validation-failed { border:2px solid #b44c4c !important; background:#fff !important; }
+
+input:focus { border:2px solid #222 !important; }
+
 button.disabled {}
 button.disabled span {}
 
-button.button { cursor:pointer; border:2px solid #525252; background:transparent; text-transform:uppercase; font-size:22px; color:#515151; padding:7px 10px; }
+button.button { cursor:pointer; background:#fff; border:2px solid #222; font-size:20px; color:#515151; padding:2px 0; }
 button.button:hover { opacity:0.8; }
+button.button.dark { background:#222; color:#fff; border:2px solid #222; }
+button.button.dark:hover { background:#fff; color:#222; border:2px solid #222; }
+
+button.button.gray { color:#fff; background:#6b6b6b; border:2px solid #6b6b6b; }
+button.button.gray:hover { color:#6b6b6b; background:#fff; border:2px solid #6b6b6b; }
+
+button.button.full-width { width:100%; }
 
 button.btn-checkout span {}
 button.btn-checkout.no-checkout {}

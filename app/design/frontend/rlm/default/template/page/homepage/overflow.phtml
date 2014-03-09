@@ -10,17 +10,50 @@
 
 <div id="sign_in" class="sign-in popup">
     <span class="close"></span>
-    sign in
-    <a id="forgot-password" href="#"><?php echo $this->__('Forgot password?') ?></a>
-    <a id="create-new" href="#"><?php echo $this->__('Create new account') ?></a>
+    <p class="popup-title"><?php echo $this->__('Sign In') ?></p>
+    <div class="popup-content">
+        <form id="login-form" action="<?php echo Mage::getUrl('customer/account/loginpost'); ?>" method="post">
+            <input type="text" placeholder="<?php echo $this->__('Email') ?>" class="input-text required-entry validate-email" name="login[username]" id="email" />
+            <input type="password" placeholder="<?php echo $this->__('Password') ?>" class="input-text required-entry" name="login[password]" id="password" />
+
+            <button class="button dark login"><?php echo $this->__('Log in') ?></button>
+        </form>
+        <a id="forgot-password" href="#"><?php echo $this->__('Forgot password?') ?></a>
+        <span class="or"><span><?php echo $this->__('or') ?></span></span>
+        <button id="create-new" class="button gray full-width"><?php echo $this->__('Create new account') ?></button>
+    </div>
 </div>
 
 <div id="create_new" class="create-new popup">
     <span class="close"></span>
-    create new
+    <p class="popup-title"><?php echo $this->__('Create new account') ?></p>
+    <div class="popup-content">
+        <form id="creat-new-form" action="<?php echo Mage::getUrl('customer/account/createpost') ?>" method="post">
+            <input placeholder="<?php echo $this->__('Firstname') ?>" type="text" name="firstname" class="input-text required-entry" />
+            <input placeholder="<?php echo $this->__('Lastname') ?>" type="text" name="lastname" class="input-text required-entry" />
+            <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
+            <input placeholder="<?php echo $this->__('Password') ?>" type="password" name="password" class="input-text required-entry" />
+            <input placeholder="<?php echo $this->__('Repeat Password') ?>" type="password" name="confirmation" class="input-text required-entry" />
+
+            <button class="button gray full-width"><?php echo $this->__('Create new account') ?></button>
+        </form>
+    </div>
 </div>
 
 <div id="reset-pass" class="reset-pass popup">
     <span class="close"></span>
-    reset pass
+    <p class="popup-title"><?php echo $this->__('Reset password') ?></p>
+    <div class="popup-content">
+        <p><?php echo $this->__('New password we be sent to your email') ?></p>
+        <form id="reset-form" action="<?php Mage::getUrl('customer/account/forgotpasswordpost') ?>" method="post">
+            <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
+            <button class="button gray full-width">Reset</button>
+        </form>
+    </div>
 </div>
+
+<script type="text/javascript">
+    var loginForm = new VarienForm('login-form', true);
+    var createForm = new VarienForm('creat-new-form', true);
+    var resetPass = new VarienForm('reset-form', true);
+</script>
