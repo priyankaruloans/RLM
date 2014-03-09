@@ -37,7 +37,7 @@
 
 .menu-type-horizontal ul { padding-bottom:8px; position:absolute; border-top:4px solid transparent; top:64px; background:rgba(0,0,0, 0.7); width:128px; display:none; }
 .menu-type-horizontal ul li { padding:0; border:none; font-size:18px; border-top:0; font-size:16px; font-weight:normal; }
-.menu-type-horizontal ul li a { padding:2px 10px; display:block; }
+.menu-type-horizontal ul li a { padding:2px 10px; display:block; text-transform:uppercase; }
 .menu-type-horizontal ul li.last {}
 .menu-type-horizontal li.level1 ul { left:50%; top:70%; }
 .menu-type-horizontal li:hover > ul { display:block; }
