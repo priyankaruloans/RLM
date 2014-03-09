@@ -47,7 +47,8 @@
         <p><?php echo $this->__('New password we be sent to your email') ?></p>
         <form id="reset-form" action="<?php Mage::getUrl('customer/account/forgotpasswordpost') ?>" method="post">
             <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
-            <button class="button gray full-width">Reset</button>
+            <button id="reset-button" class="button gray">Reset</button>
+            <a id="back-to-login" href="#"><?php echo $this->__('Remembered it?') ?></a>
         </form>
     </div>
 </div>

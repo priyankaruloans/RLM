@@ -66,7 +66,7 @@ function TopMenu (topMenu, topMenuShow) {
 }
 
 jQuery('document').ready(function () {
-    var myAccount  = new Popup('li.top-my-account a', '#sign_in');
+    var myAccount  = new Popup('li.top-my-account a, #back-to-login', '#sign_in');
     var forgotPass = new Popup('#forgot-password', '#reset-pass');
     var createNew  = new Popup('#create-new', '#create_new');
     var topMenu    = new TopMenu('.header-container', '.show-menu');
