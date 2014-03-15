@@ -1210,6 +1210,31 @@ tr.summary-details-excluded { font-style:italic; }
 .cms-index-index address { color:#fff; font-size:14px; }
 /* ======================================================================================= */
 
+/* Popups ================================================================================ */
+.overflow-bg { display:none; position:fixed; top:0; left:0; width:100%; height:100%; background:#515151; opacity:0.5; z-index:999999; }
+
+/* Popup general styles */
+.popup { display:none; top:113px; position:absolute; margin:0 auto; z-index:1000000; }
+.popup { position:absolute; width:405px; margin-left:-189px; left:50%; background:#fff; }
+.popup p,
+.popup strong { font-size:16px; }
+.popup strong { margin:20px 0 5px 0; display:block; }
+.popup div { margin-top:20px; display:block; }
+.popup .close { position:absolute; top:20px; right:20px; cursor:pointer; background:url('../images/close.png') no-repeat; width:16px; height:16px; display:block; }
+.popup .popup-title { font-size:20px; color:#222; border-bottom:1px solid #222; width:367px; padding:13px 19px 15px; margin-bottom:30px; }
+.popup .popup-content { padding:0 19px 20px 20px; }
+.popup .popup-content input { width:345px; height:24px; margin-bottom:20px; font-size:17px; padding-left:15px; }
+.popup .popup-content button.login { width:235px; }
+.popup .popup-content #forgot-password { color:#b6b6b6; font-size:13px; margin-left:11px; }
+.popup .popup-content .or { border-top:1px solid #222; position:relative; margin:26px 0; display:block; }
+.popup .popup-content .or span { text-transform:uppercase; color:#222; font-size:14px; position:absolute; display:block; background:#fff; width:45px; margin-left:-19px; left:50%; top:-9px; text-align:center; }
+.popup .popup-content .validation-advice { display:none !important; }
+.popup .error-container { display:none; margin-top:0; margin-bottom:10px; border:2px solid #b44c4c; background:#ecd4d5; padding:5px 10px; text-transform:uppercase; color:#000; }
+
+.reset-pass .popup-content p { font-size:16px; color:#222; padding-left:20px; margin-bottom:20px; }
+.reset-pass .popup-content #reset-button { width:235px; }
+.reset-pass .popup-content #back-to-login { margin-left:13px; color:#b6b6b6; font-size:13px; }
+/* ======================================================================================= */
 
 /* Clears ================================================================================ */
 .clearer:after,

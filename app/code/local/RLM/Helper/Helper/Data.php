@@ -9,9 +9,11 @@ class RLM_Helper_Helper_Data
         if (Mage::getSingleton('customer/session')->isLoggedIn()) {
             $data['url'] = Mage::getUrl('customer/account/logout');
             $data['title'] = $this->__('Log Out');
+            $data['class'] = 'logout';
         } else {
             $data['url'] = Mage::getUrl('customer/account/login');
             $data['title'] = $this->__('Log In');
+            $data['class'] = 'login';
         }
 
         return $data;

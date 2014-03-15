@@ -47,7 +47,7 @@
                     <li class="top-cart"><a href="<?php echo $rlm->getCartUrl() ?>"><?php echo $this->__('Cart [ %s ]', $rlm->getCartItemsCount()) ?></a></li>
                     <li class="top-settings"><a href="<?php echo $rlm->getSettingsUrl() ?>"><?php echo $this->__('Settings') ?></a></li>
                     <?php $linkData = $rlm->getLoginLogoutLink() ?>
-                    <li class="top-my-account"><a href="<?php echo $linkData['url'] ?>"><?php echo $linkData['title'] ?></a></li>
+                    <li class="top-my-account <?php echo $linkData['class'] ?>"><a href="<?php echo $linkData['url'] ?>"><?php echo $linkData['title'] ?></a></li>
                 </ul>
             </li>
         </ul>

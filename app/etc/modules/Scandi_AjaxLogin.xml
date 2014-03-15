@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <Scandi_AjaxLogin>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Scandi_AjaxLogin>
+    </modules>
+</config>

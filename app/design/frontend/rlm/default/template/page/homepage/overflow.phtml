@@ -12,7 +12,8 @@
     <span class="close"></span>
     <p class="popup-title"><?php echo $this->__('Sign In') ?></p>
     <div class="popup-content">
-        <form id="login-form" action="<?php echo Mage::getUrl('customer/account/loginpost'); ?>" method="post">
+        <form id="login-form" action="<?php echo Mage::getUrl('scandi_ajaxlogin/account/loginpost'); ?>" method="post">
+            <div class="error-container"></div>
             <input type="text" placeholder="<?php echo $this->__('Email') ?>" class="input-text required-entry validate-email" name="login[username]" id="email" />
             <input type="password" placeholder="<?php echo $this->__('Password') ?>" class="input-text required-entry" name="login[password]" id="password" />
 
@@ -28,7 +29,8 @@
     <span class="close"></span>
     <p class="popup-title"><?php echo $this->__('Create new account') ?></p>
     <div class="popup-content">
-        <form id="creat-new-form" action="<?php echo Mage::getUrl('customer/account/createpost') ?>" method="post">
+        <form id="creat-new-form" action="<?php echo Mage::getUrl('scandi_ajaxlogin/account/createpost') ?>" method="post">
+            <div class="error-container"></div>
             <input placeholder="<?php echo $this->__('Firstname') ?>" type="text" name="firstname" class="input-text required-entry" />
             <input placeholder="<?php echo $this->__('Lastname') ?>" type="text" name="lastname" class="input-text required-entry" />
             <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
@@ -45,7 +47,8 @@
     <p class="popup-title"><?php echo $this->__('Reset password') ?></p>
     <div class="popup-content">
         <p><?php echo $this->__('New password we be sent to your email') ?></p>
-        <form id="reset-form" action="<?php Mage::getUrl('customer/account/forgotpasswordpost') ?>" method="post">
+        <form id="reset-form" action="<?php Mage::getUrl('scandi_ajaxlogin/account/forgotpasswordpost') ?>" method="post">
+            <div class="error-container"></div>
             <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
             <button id="reset-button" class="button gray">Reset</button>
             <a id="back-to-login" href="#"><?php echo $this->__('Remembered it?') ?></a>

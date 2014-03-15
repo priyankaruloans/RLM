@@ -17,6 +17,7 @@
 
         <reference name="head">
             <action method="addItem"><type>skin_js</type><name>js/jquery.js</name></action>
+            <action method="addItem"><type>skin_js</type><name>js/jquery.form.min.js</name></action>
             <action method="addItem"><type>skin_js</type><name>js/functions.js</name></action>
         </reference>
 
@@ -24,6 +25,10 @@
             <block type="scandi_menumanager/menu" name="main.menu">
                 <action method="setMenuId"><menu_id>main_menu</menu_id></action>
             </block>
+        </reference>
+
+        <reference name="content">
+            <block type="core/template" name="overflow-container" template="page/homepage/overflow.phtml"/>
         </reference>
     </default>
 
@@ -38,17 +43,6 @@
             <action method="addItem"><type>skin_css</type><name>css/homepage.css</name></action>
             <action method="addItem"><type>skin_js</type><name>js/jquery.cycle.all.js</name></action>
             <action method="addItem"><type>skin_css</type><name>css/rlm_slider.css</name></action>
-        </reference>
-
-        <reference name="content">
-            <block type="core/template" name="overflow-container" template="page/homepage/overflow.phtml">
-                <block type="scandi_cms/block" name="delivery_info">
-                    <action method="setBlockClass"><class>delivery_info popup</class></action>
-                    <action method="setBlockId"><block_id>delivery_info</block_id></action>
-                </block>
-
-                <block type="core/template" name="contact.us" template="contacts/form.phtml" />
-            </block>
         </reference>
     </cms_index_index>
 </layout>

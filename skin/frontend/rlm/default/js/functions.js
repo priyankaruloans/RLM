@@ -66,8 +66,40 @@ function TopMenu (topMenu, topMenuShow) {
 }
 
 jQuery('document').ready(function () {
-    var myAccount  = new Popup('li.top-my-account a, #back-to-login', '#sign_in');
+    var myAccount  = new Popup('li.top-my-account.login a, #back-to-login', '#sign_in');
     var forgotPass = new Popup('#forgot-password', '#reset-pass');
     var createNew  = new Popup('#create-new', '#create_new');
     var topMenu    = new TopMenu('.header-container', '.show-menu');
+
+    jQuery('#login-form').submit(function () {
+        var form = jQuery(this);
+
+        form.ajaxSubmit({
+            success: formSuccess
+        });
+        return false;
+    });
+
+    jQuery('#creat-new-form').submit(function () {
+        var form = jQuery(this);
+
+        form.ajaxSubmit({
+            success: formSuccess
+        });
+        return false;
+    });
+
+    function formSuccess (data, status, xhr, form) {
+        console.log(data);
+        if (data.error) {
+            console.log('1');
+            form.find('.error-container').empty().append(data.error).show();
+        } else if (data[0] && data[0].error) {
+            console.log('2');
+            form.find('.error-container').empty().append(data[0].error).show();
+        } else if (data.success) {
+            console.log('3');
+            setLocation(data.success);
+        }
+    }
 });
