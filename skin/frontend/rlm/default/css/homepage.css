@@ -1,4 +1,6 @@
 /* CMS Home Page */
+.main { width:auto; margin:0; }
+
 .cms-home .subtitle {}
 .cms-index-index .subtitle {}
 .cms-index-index .header-container { background:rgba(0,0,0, 0.4); position:absolute; z-index:99999; top:-100px; left:0; width:100%; }
@@ -7,3 +9,5 @@
 .show-menu { z-index:99999; background:url('../images/show-menu.png'); display:block; position:absolute; right:0; top:0; width:50px; height:50px; }
 
 .menu-type-horizontal ul { background:rgba(0,0,0, 0.4); }
+
+.footer-container { display:none; }

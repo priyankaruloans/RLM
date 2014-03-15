@@ -89,16 +89,22 @@ jQuery('document').ready(function () {
         return false;
     });
 
+    jQuery('#reset-form').submit(function () {
+        var form = jQuery(this);
+
+        form.ajaxSubmit({
+            success: formSuccess
+        });
+        return false;
+    });
+
     function formSuccess (data, status, xhr, form) {
         console.log(data);
         if (data.error) {
-            console.log('1');
             form.find('.error-container').empty().append(data.error).show();
         } else if (data[0] && data[0].error) {
-            console.log('2');
             form.find('.error-container').empty().append(data[0].error).show();
         } else if (data.success) {
-            console.log('3');
             setLocation(data.success);
         }
     }

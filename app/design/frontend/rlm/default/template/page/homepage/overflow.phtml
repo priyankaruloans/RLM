@@ -47,7 +47,7 @@
     <p class="popup-title"><?php echo $this->__('Reset password') ?></p>
     <div class="popup-content">
         <p><?php echo $this->__('New password we be sent to your email') ?></p>
-        <form id="reset-form" action="<?php Mage::getUrl('scandi_ajaxlogin/account/forgotpasswordpost') ?>" method="post">
+        <form id="reset-form" action="<?php echo Mage::getUrl('scandi_ajaxlogin/account/forgotpasswordpost') ?>" method="post">
             <div class="error-container"></div>
             <input placeholder="<?php echo $this->__('Email') ?>" type="text" name="email" class="input-text required-entry validate-email" />
             <button id="reset-button" class="button gray">Reset</button>

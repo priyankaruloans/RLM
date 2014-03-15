@@ -185,4 +185,48 @@ class Scandi_AjaxLogin_AccountController
         $this->getResponse()->setBody($response);
         return;
     }
+
+    /**
+     * Forgot customer password action
+     */
+    public function forgotPasswordPostAction()
+    {
+        $email = (string) $this->getRequest()->getPost('email');
+        if ($email) {
+            if (!Zend_Validate::is($email, 'EmailAddress')) {
+                $this->_getSession()->setForgottenEmail($email);
+                $response = json_encode(array('error' => $this->__('Invalid email address.')));
+                $this->getResponse()->setHeader('Content-type', 'application/json');
+                $this->getResponse()->setBody($response);
+                return;
+            }
+
+            /** @var $customer Mage_Customer_Model_Customer */
+            $customer = Mage::getModel('customer/customer')
+                ->setWebsiteId(Mage::app()->getStore()->getWebsiteId())
+                ->loadByEmail($email);
+
+            if ($customer->getId()) {
+                try {
+                    $newResetPasswordLinkToken = Mage::helper('customer')->generateResetPasswordLinkToken();
+                    $customer->changeResetPasswordLinkToken($newResetPasswordLinkToken);
+                    $customer->sendPasswordResetConfirmationEmail();
+                } catch (Exception $exception) {
+                    $response = json_encode(array('error' => $exception->getMessage()));
+                    $this->getResponse()->setHeader('Content-type', 'application/json');
+                    $this->getResponse()->setBody($response);
+                    return;
+                }
+            }
+            $response = json_encode(array('error' => Mage::helper('customer')->__('If there is an account associated with %s you will receive an email with a link to reset your password.', Mage::helper('customer')->htmlEscape($email))));
+            $this->getResponse()->setHeader('Content-type', 'application/json');
+            $this->getResponse()->setBody($response);
+            return;
+        } else {
+            $response = json_encode(array('error' => $this->__('Please enter your email.')));
+            $this->getResponse()->setHeader('Content-type', 'application/json');
+            $this->getResponse()->setBody($response);
+            return;
+        }
+    }
 }

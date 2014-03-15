@@ -21,7 +21,11 @@ class RLM_Helper_Helper_Data
 
     public function getSettingsUrl()
     {
-        return Mage::getUrl('customer/account');
+        if (Mage::getSingleton('customer/session')->isLoggedIn()) {
+            return Mage::getUrl('customer/account');
+        }
+
+        return false;
     }
 
     public function getCartItemsCount()
