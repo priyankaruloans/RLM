@@ -6,6 +6,7 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
+html, body    { height:100%; }
 body          { background:#fff; font:12px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
@@ -94,7 +95,7 @@ ul,ol         { list-style:none; }
 /* ======================================================================================= */
 
 /* Layout ================================================================================ */
-.wrapper {}
+.wrapper { height:100%; }
 .page { text-align:left; padding-bottom:170px; position:relative; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
