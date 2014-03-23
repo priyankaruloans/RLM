@@ -10,4 +10,14 @@ class RLM_Filter_Model_Observer
         Mage::app()->getResponse()->sendResponse();
         exit;
     }
+
+    /**
+     * If request is made to customer/account/index action, user is being redirected to edit page.
+     */
+    public function redirectToSettings()
+    {
+        Mage::app()->getResponse()->setRedirect(Mage::getUrl('customer/account/edit'));
+        Mage::app()->getResponse()->sendResponse();
+        exit;
+    }
 }

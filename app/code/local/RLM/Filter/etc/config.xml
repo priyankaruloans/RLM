@@ -32,6 +32,16 @@
                     </controller_action_predispatch_customer_account_login>
                 </observers>
             </controller_action_predispatch_customer_account_create>
+
+            <controller_action_predispatch_customer_account_index>
+                <observers>
+                    <controller_action_predispatch_customer_account_login>
+                        <type>singleton</type>
+                        <class>rlm_filter/observer</class>
+                        <method>redirectToSettings</method>
+                    </controller_action_predispatch_customer_account_login>
+                </observers>
+            </controller_action_predispatch_customer_account_index>
         </events>
     </global>
 </config>
