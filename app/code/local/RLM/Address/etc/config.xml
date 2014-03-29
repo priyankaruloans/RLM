@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Address>
+            <version>0.1.0</version>
+        </RLM_Address>
+    </modules>
+    <global>
+    </global>
+    <frontend>
+        <routers>
+            <customer>
+                <args>
+                    <modules>
+                        <rlm_address before="Mage_Customer">RLM_Address</rlm_address>
+                    </modules>
+                </args>
+            </customer>
+        </routers>
+    </frontend>
+</config>
