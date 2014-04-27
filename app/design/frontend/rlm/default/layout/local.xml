@@ -51,6 +51,12 @@
             <action method="addItem"><type>skin_css</type><name>css/rlm_slider.css</name></action>
         </reference>
     </cms_index_index>
+	
+    <catalog_category_view>
+        <reference name="root">
+            <action method="setTemplate"><name>page/1column.phtml</name></action>
+        </reference>
+    </catalog_category_view>	
 
     <catalog_category_default>
         <reference name="head">
