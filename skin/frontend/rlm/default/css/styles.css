@@ -6,6 +6,8 @@
 /* Reset ================================================================================= */
 * { margin:0; padding:0; }
 
+html          { height:100%; }
+body          { min-height:100%; position:relative; }
 body          { background:#fff; font:12px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
@@ -94,8 +96,8 @@ ul,ol         { list-style:none; }
 /* ======================================================================================= */
 
 /* Layout ================================================================================ */
-.wrapper {}
-.page { text-align:left; padding-bottom:170px; position:relative; }
+.wrapper { height:100%; position:relative; }
+.page { text-align:left; padding-bottom:200px; position:relative; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
@@ -180,8 +182,8 @@ p.control input.radio { margin-right:6px; }
 /* Form lists */
 /* Grouped fields */
 /*.form-list { width:535px; margin:0 auto; overflow:hidden; }*/
-.form-list li { margin:0 0 8px; }
-.form-list label { float:left; color:#707070; position:relative; z-index:0; }
+.form-list li {  }
+.form-list label { float:left; position:relative; z-index:0; color:#222; font-size:13px; margin-top:6px; }
 .form-list label.required {}
 .form-list label.required em { float:right; font-style:normal; color:#eb340a; position:absolute; top:0; right:-8px; }
 .form-list li.control label { float:none; }
@@ -189,15 +191,17 @@ p.control input.radio { margin-right:6px; }
 .form-list li.control input.checkbox { margin-right:6px; }
 .form-list li.control .input-box { clear:none; display:inline; width:auto; }
 /*.form-list li.fields { margin-right:-15px; }*/
-.form-list .input-box { display:block; clear:both; width:260px; }
-.form-list .field { float:left; width:275px; }
-.form-list input.input-text { width:254px; border:2px solid #525252; height:23px; }
+.form-list .input-box { float:right; margin-bottom:10px; }
+.form-list .field { float:left; width:100%; }
+.form-list .field.button-save { width:344px; float:right; }
+.form-list .field.button-save .input-box { width:275px; float:left; }
+.form-list .field.button-save button { padding-left:10px; padding-right:10px; }
+.form-list input.input-text { width:336px; float:left; border:2px solid #525252; height:23px; }
 .form-list input.input-text:focus { background:#e4e4e4; }
 .form-list textarea { width:254px; height:10em; }
 .form-list textarea:focus { background:#e4e4e4; }
-.form-list select { width:260px; }
+.form-list select { width: 344px; border: 2px solid #525252; height: 31px; }
 .form-list li.wide .input-box { width:535px; }
-.form-list li.wide input.input-text { width:529px; }
 .form-list li.wide textarea { width:529px; }
 .form-list li.wide select { width:535px; }
 .form-list li.additional-row { border-top:1px solid #ccc; margin-top:10px; padding-top:7px; }
@@ -272,7 +276,7 @@ p.control input.radio { margin-right:6px; }
 
 .buttons-set-order {}
 
-.fieldset { background:#fefefe; padding:22px 25px 12px 33px; margin:28px 0; }
+.fieldset { background:#fefefe; padding:0 25px 0 33px; }
 .fieldset .legend { float:left; font-weight:bold; font-size:13px; border:1px solid #fefefe; background:#dedede; color:#333; margin:-33px 0 0 -10px; padding:0 8px; position:relative; }
 
 /* Form Validation */
@@ -545,6 +549,10 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Block: Account */
 .block-account {}
+.block-account li { font-size:13px; display:inline; border-right:1px solid #6b6b6b; padding-right:10px; margin-left:10px; }
+.block-account li.last { border:none; }
+.block-account li strong { font-weight:normal; color:#222; }
+.block-account li a { color:#6b6b6b; }
 
 /* Block: Currency Switcher */
 .block-currency {}
@@ -1121,7 +1129,11 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* My Account ============================================================================= */
+.block-account { margin:50px 0 20px 80px; }
 .my-account .title-buttons .link-rss { float:none; margin:0; }
+.my-account .form-list { width:550px; }
+.my-account .form-list input.input-text { width:336px; }
+.my-account .fieldset { margin-top:0; }
 
 /********** < Dashboard */
 .dashboard {}

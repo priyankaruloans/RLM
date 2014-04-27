@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <RLM_Filter>
+            <version>0.1.0</version>
+        </RLM_Filter>
+    </modules>
+    <global>
+        <models>
+            <rlm_filter>
+                <class>RLM_Filter_Model</class>
+            </rlm_filter>
+        </models>
+
+        <events>
+            <controller_action_predispatch_customer_account_login>
+                <observers>
+                    <controller_action_predispatch_customer_account_login>
+                        <type>singleton</type>
+                        <class>rlm_filter/observer</class>
+                        <method>sendToNoRoute</method>
+                    </controller_action_predispatch_customer_account_login>
+                </observers>
+            </controller_action_predispatch_customer_account_login>
+
+            <controller_action_predispatch_customer_account_create>
+                <observers>
+                    <controller_action_predispatch_customer_account_login>
+                        <type>singleton</type>
+                        <class>rlm_filter/observer</class>
+                        <method>sendToNoRoute</method>
+                    </controller_action_predispatch_customer_account_login>
+                </observers>
+            </controller_action_predispatch_customer_account_create>
+
+            <controller_action_predispatch_customer_account_index>
+                <observers>
+                    <controller_action_predispatch_customer_account_login>
+                        <type>singleton</type>
+                        <class>rlm_filter/observer</class>
+                        <method>redirectToSettings</method>
+                    </controller_action_predispatch_customer_account_login>
+                </observers>
+            </controller_action_predispatch_customer_account_index>
+        </events>
+    </global>
+</config>

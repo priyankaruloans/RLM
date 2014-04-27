@@ -63,4 +63,22 @@
             <action method="removeItem"><type>skin_js</type><name>js/jquery.js</name></action>
         </reference>
     </catalog_category_default>
+
+    <customer_account>
+        <reference name="root">
+            <action method="setTemplate"><name>page/1column.phtml</name></action>
+        </reference>
+
+        <reference name="content">
+            <block type="customer/account_navigation" name="customer_account_navigation" before="-" template="customer/account/navigation.phtml">
+                <action method="addLink" translate="label" module="customer"><name>account_edit</name><path>customer/account/edit/</path><label>My Settings</label></action>
+                <action method="addLink" translate="label" module="customer"><name>address_book</name><path>customer/address/</path><label>My Address</label></action>
+                <action method="addLink" translate="label" module="sales"><name>orders</name><path>sales/order/history/</path><label>My Orders</label></action>
+            </block>
+        </reference>
+    </customer_account>
+
+    <sales_order_history>
+        <remove name="customer.account.link.back" />
+    </sales_order_history>
 </layout>
