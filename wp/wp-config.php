@@ -22,7 +22,7 @@ define('DB_NAME', 'rlm');
 define('DB_USER', 'root');
 
 /** MySQL database password */
-define('DB_PASSWORD', 'konahin2');
+define('DB_PASSWORD', '');
 
 /** MySQL hostname */
 define('DB_HOST', 'localhost');
@@ -88,4 +88,3 @@ if ( !defined('ABSPATH') )
 
 /** Sets up WordPress vars and included files. */
 require_once(ABSPATH . 'wp-settings.php');
-
