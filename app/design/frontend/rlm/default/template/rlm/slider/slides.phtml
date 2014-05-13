@@ -5,6 +5,7 @@
  */
 ?>
 
+<div class="logo-large"></div>
 <ul class="slider">
     <?php foreach ($this->getSlides() as $slide): ?>
         <li><img src="<?php echo $this->getSlideUrl($slide); ?>" alt="<?php echo $slide->getTitle(); ?>" /></li>
@@ -12,7 +13,35 @@
 </ul>
 
 <script type="text/javascript">
+	logoInUse = false;
+
     jQuery('document').ready(function() {
         jQuery('.slider').cycle({fx: 'scrollLeft'});
+
+        var top = (jQuery(window).height()-130)/2;
+        jQuery('.logo-large').css({'top' : top})
     });
+
+    jQuery(window).resize(function(){
+        var top = (jQuery(window).height()-130)/2;
+        jQuery('.logo-large').css({'top' : top })
+		jQuery('.slider').children('li').each(function(){
+			jQuery(this).css({ 'width' : jQuery(window).width() })
+		})
+    })
+
+    jQuery('.logo-large').on('mouseenter', function(){
+    	if (logoInUse == false){
+    		logoInUse = true;
+    		jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
+    			jQuery(this).animate({ 'opacity': "0"}, 2000,function(){
+    				logoInUse = false;
+    			})
+    		})
+    	}
+    })
 </script>
+
+<style>
+.logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
+</style>

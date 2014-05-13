@@ -359,7 +359,7 @@ p.required { font-size:10px; float:right; color:#f00; }
 .data-table tr.first {}
 .data-table tr.last {}
 .data-table tr.odd {}
-.data-table tr.even { background-color:#f6f6f6; }
+.data-table tr.even { }
 .data-table tbody.odd {}
 .data-table tbody.odd td { border-width:0 1px; }
 .data-table tbody.even { background-color:#f6f6f6; }
