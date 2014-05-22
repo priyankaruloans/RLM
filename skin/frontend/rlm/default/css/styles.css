@@ -727,7 +727,7 @@ tr.summary-details-excluded { font-style:italic; }
 .old-price { }
 .old-price .price-label { display: none; }
 .old-price .price,.product-options-bottom .old-price .price { display: none; }
-.product-shop .old-price .price { display: block; font-size: 20px; font-weight: normal; text-decoration: line-through; }
+.product-shop .old-price .price { display: block; font-size: 14px; font-weight: normal; text-decoration: line-through; margin-top: 7px; /* margin-left: 10px; */}
 .product-image:hover .old-price .price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; text-decoration:line-through; }
 
 /* Special price */
