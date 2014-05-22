@@ -97,7 +97,7 @@ ul,ol         { list-style:none; }
 
 /* Layout ================================================================================ */
 .wrapper { height:100%; position:relative; }
-.page { text-align:left; padding-bottom:200px; position:relative; }
+.page { text-align:left; padding-bottom:50px; position:relative; }
 .page-print { background:#fff; padding:20px; text-align:left; }
 .page-empty { background:#fff; padding:20px; text-align:left; }
 .page-popup { padding:20px; text-align:left; }
@@ -726,13 +726,15 @@ tr.summary-details-excluded { font-style:italic; }
 /* Old price */
 .old-price { }
 .old-price .price-label { display: none; }
-.old-price .price { display: none; }
+.old-price .price,.product-options-bottom .old-price .price { display: none; }
+.product-shop .old-price .price { display: block; font-size: 20px; font-weight: normal; text-decoration: line-through; }
 .product-image:hover .old-price .price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; text-decoration:line-through; }
 
 /* Special price */
 .special-price { }
 .special-price .price-label { display: none; }
-.special-price .price { display: none; }
+.special-price .price,.product-options-bottom .special-price .price { display: none; }
+.product-shop .special-price .price { display: block; font-size: 20px; font-weight: normal; }
 .product-image:hover .special-price .price { margin: 0 0 5px; display: inline-block; font-weight: bold; font-size: 13px; color: #FFF; position: absolute; text-align: center; width: 230px; height: 179px; z-index: 1; line-height: 65px; bottom: -5px; }
 
 /* Minimal price (as low as) */
@@ -1235,8 +1237,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 
 /* Footer ================================================================================ */
-.footer-container { height:135px; margin-top:20px; text-align:center; position:absolute; bottom:0; width:100%; min-width:1000px; padding-bottom:20px; }
-.footer { height:30px; background:#999999; position:relative; z-index:10;  padding-top:7px; }
+.footer-container { margin-top:20px; text-align:center; position:absolute; bottom:0; width:100%; min-width:1000px; }
+.footer { height:30px; background:#999999; z-index:10;  padding-top:7px; }
 .footer ul { display:inline; }
 .footer ul a { color:#fff; font-size:17px; margin-left:25px; }
 .footer p { text-align:right; }
