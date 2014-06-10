@@ -27,6 +27,7 @@
 .menu-type-horizontal { position:relative; z-index:100; float:left; margin-left:88px; margin-top:18px; }
 .menu-type-horizontal li.level0 { display:inline; margin-right:32px; border-bottom: 4px solid transparent; }
 .menu-type-horizontal li.level0:hover { border-bottom-color:#fff; }
+.menu-type-horizontal li.level0.active { border-bottom-color:#fff; }
 .menu-type-horizontal li.level0.last {}
 .menu-type-horizontal li { display:block; position:relative; padding:30px 0 15px; background:transparent; font-size:17px !important; font-weight:bold; }
 .menu-type-horizontal > li:hover {}
