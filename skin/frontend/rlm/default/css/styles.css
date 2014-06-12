@@ -8,7 +8,7 @@
 
 html          { height:100%; }
 body          { min-height:100%; position:relative; }
-body          { background:#fff; font:12px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
+body          { background:#fff; font:14px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -295,6 +295,8 @@ p.required { font-size:10px; float:right; color:#f00; }
 .error { color:#f00; font-weight:bold; }
 .notice { color:#ccc; }
 
+.checkout-onepage-success .buttons-set button.button { float:left !important; padding-left:10px; padding-right:10px; }
+
 .messages,
 .messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
 .messages { width:100%; overflow:hidden; }
@@ -353,7 +355,7 @@ p.required { font-size:10px; float:right; color:#f00; }
 
 /* Data Table */
 .data-table { width:100%; }
-.data-table th { padding:5px; font-weight:bold; white-space:nowrap; }
+.data-table th { padding:5px; white-space:nowrap; }
 .data-table td { padding:5px; vertical-align: middle; }
 .data-table thead { background-color:#999999; color: #FFF; }
 .data-table tbody {}
@@ -382,6 +384,13 @@ tr.show-details td {}
 tr.summary-details td { font-size:11px; background-color:#dae1e4; color:#626465; }
 tr.summary-details-first td { border-top:1px solid #d2d8db; }
 tr.summary-details-excluded { font-style:italic; }
+
+#shopping-cart-table tfoot { border-top:1px solid #999; }
+#shopping-cart-table tfoot .a-right { text-align:left !important; }
+
+.cart-collaterals { margin-top:-40px; }
+#shopping-cart-totals-table tfoot { border-top:1px solid #999; }
+.continue-to-paypal { padding:10px 20px !important; }
 
 /* Shopping cart tax info */
 .cart-tax-info { display:block; }
@@ -631,6 +640,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* Paypal */
 .sidebar .paypal-logo { display:block; margin:10px 0; text-align:center; }
 .sidebar .paypal-logo a { float:none; }
+.paypal-review-order .buttons-set { padding:10px 0 0 0; margin-top:10px; border-top:1px dotted #000; }
+.paypal-review-order button { margin-left:20px; padding-left:10px; padding-right:10px; }
 /* ======================================================================================= */
 
 
@@ -963,7 +974,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-table .item-msg { font-size:10px; }
 
 /* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
+.cart .cart-collaterals { padding:0 0 0; }
 .cart .cart-collaterals .col2-set { float:left; width:700px; }
 
 .cart .crosssell {}
