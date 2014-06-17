@@ -1261,11 +1261,15 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container .bottom-container { text-align:center; }
 .footer-container ul.social-icons { margin-top:21px; margin-bottom:10px; }
 .footer-container ul.social-icons li { display:inline-block; margin-left:16px; }
+.footer-container ul.social-icons li.insta-links-holder { position:relative; }
 .footer-container ul.social-icons li a { background:url('../images/social-sprite.png') no-repeat 0 0; display:block; width:25px; height:25px; }
 .footer-container ul.social-icons li a:hover { opacity:0.8; }
 .footer-container ul.social-icons li a.facebook { background-position: -58px center; }
 .footer-container ul.social-icons li a.twitter { background-position: -102px center; }
-.footer-container ul.social-icons li a.instagram { background-position: -146px center; }
+.footer-container ul.social-icons li a.instagram { cursor:pointer; position:relative; background-position: -146px center; }
+.footer-container ul.social-icons li .insta-links { display:none; left:-30px; z-index:999; border:1px solid; position:absolute; top:-110px; width:113px; background:#fff; padding:10px; }
+.footer-container ul.social-icons li .insta-links a { color:#707070 !important; margin:0; }
+.footer-container ul.social-icons li .insta-links li { display:block; margin:0; }
 .footer-container ul.social-icons li a.vimeo { background-position: -190px center; }
 .footer-container ul.social-icons li a.about { background-position: -15px center; }
 /* ======================================================================================= */

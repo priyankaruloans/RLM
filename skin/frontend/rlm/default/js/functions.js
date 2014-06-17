@@ -107,5 +107,11 @@ jQuery('document').ready(function () {
         } else if (data.success) {
             setLocation(data.success);
         }
-    }
+    };
+
+    jQuery('.instagram').click(function () {
+        var links = jQuery('.insta-links');
+
+        links.toggle();
+    });
 });
