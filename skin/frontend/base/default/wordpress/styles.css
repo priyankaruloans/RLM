@@ -51,6 +51,7 @@
 .post-list li.item { margin-top: 55px; text-align: center; }
 .post-list li.item .post-list-item { height: 1%; overflow: hidden; }
 .post-list h2 { line-height: 1em; margin-bottom: 1em; }
+.post-list h2 a:hover { font-weight: bold; color: #000;}
 
 /**
  * Post view page
