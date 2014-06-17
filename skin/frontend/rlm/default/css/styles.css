@@ -1249,9 +1249,11 @@ tr.summary-details-excluded { font-style:italic; }
 .footer-container ul.social-icons li { display:inline-block; margin-left:16px; }
 .footer-container ul.social-icons li a { background:url('../images/social-sprite.png') no-repeat 0 0; display:block; width:25px; height:25px; }
 .footer-container ul.social-icons li a:hover { opacity:0.8; }
-.footer-container ul.social-icons li a.twitter { background-position:-44px 0; }
-.footer-container ul.social-icons li a.instagram { background-position:-88px 0; }
-.footer-container ul.social-icons li a.vimeo { background-position:-132px 0; }
+.footer-container ul.social-icons li a.facebook { background-position: -58px center; }
+.footer-container ul.social-icons li a.twitter { background-position: -102px center; }
+.footer-container ul.social-icons li a.instagram { background-position: -146px center; }
+.footer-container ul.social-icons li a.vimeo { background-position: -190px center; }
+.footer-container ul.social-icons li a.about { background-position: -15px center; }
 /* ======================================================================================= */
 
 /* Popups ================================================================================ */
