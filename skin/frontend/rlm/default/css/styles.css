@@ -8,7 +8,7 @@
 
 html          { height:100%; }
 body          { min-height:100%; position:relative; }
-body          { background:#fff; font:12px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
+body          { background:#fff; font:14px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
 
@@ -295,6 +295,8 @@ p.required { font-size:10px; float:right; color:#f00; }
 .error { color:#f00; font-weight:bold; }
 .notice { color:#ccc; }
 
+.checkout-onepage-success .buttons-set button.button { float:left !important; padding-left:10px; padding-right:10px; }
+
 .messages,
 .messages ul { list-style:none !important; margin:0 !important; padding:0 !important; }
 .messages { width:100%; overflow:hidden; }
@@ -308,13 +310,15 @@ p.required { font-size:10px; float:right; color:#f00; }
 .success-msg { border-color:#446423; background-color:#eff5ea; background-image:url(../images/i_msg-success.gif); color:#3d6611; }
 .note-msg,
 .notice-msg { border-color:#fcd344; background-color:#fafaec; background-image:url(../images/i_msg-note.gif); color:#3d6611; }
+.no-products-message { font-size:22px; margin:30px; } 
 
 /* BreadCrumbs */
 .breadcrumbs { padding:10px; margin:0 0 10px; }
 .breadcrumbs li { display:inline; }
 
 /* Page Heading */
-.page-title { padding:0 0 5px; margin:0 0 10px; }
+.page-title { padding:40px 0 5px; margin:0 0 10px; }
+.page-title h1 { font-size:26px; }
 .page-title .separator { margin:0 3px; }
 .page-title .link-rss { float:right; }
 .title-buttons { text-align:right; }
@@ -351,7 +355,7 @@ p.required { font-size:10px; float:right; color:#f00; }
 
 /* Data Table */
 .data-table { width:100%; }
-.data-table th { padding:5px; font-weight:bold; white-space:nowrap; }
+.data-table th { padding:5px; white-space:nowrap; }
 .data-table td { padding:5px; vertical-align: middle; }
 .data-table thead { background-color:#999999; color: #FFF; }
 .data-table tbody {}
@@ -381,6 +385,13 @@ tr.summary-details td { font-size:11px; background-color:#dae1e4; color:#626465;
 tr.summary-details-first td { border-top:1px solid #d2d8db; }
 tr.summary-details-excluded { font-style:italic; }
 
+#shopping-cart-table tfoot { border-top:1px solid #999; }
+#shopping-cart-table tfoot .a-right { text-align:left !important; }
+
+.cart-collaterals { margin-top:-40px; }
+#shopping-cart-totals-table tfoot { border-top:1px solid #999; }
+.continue-to-paypal { padding:10px 20px !important; }
+
 /* Shopping cart tax info */
 .cart-tax-info { display:block; }
 .cart-tax-info,
@@ -389,6 +400,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-tax-info .price,
 .cart-tax-total .price { display:inline !important; font-weight:normal !important; }
 .cart-tax-total-expanded { background-position:100% -53px; }
+.cart-empty { font-size:14px; }
 
 /* Class: std - styles for admin-controlled content */
 .std .subtitle { padding:0; }
@@ -628,6 +640,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* Paypal */
 .sidebar .paypal-logo { display:block; margin:10px 0; text-align:center; }
 .sidebar .paypal-logo a { float:none; }
+.paypal-review-order .buttons-set { padding:10px 0 0 0; margin-top:10px; border-top:1px dotted #000; }
+.paypal-review-order button { margin-left:20px; padding-left:10px; padding-right:10px; }
 /* ======================================================================================= */
 
 
@@ -641,7 +655,7 @@ tr.summary-details-excluded { font-style:italic; }
 /* View Type: Grid */
 .products-grid { border-bottom:0; position:relative; }
 .products-grid.last { border-bottom:0; }
-.products-grid li.item { width: 230px; display: inline-block; margin: 20px 13px 0 0; position: relative; }
+.products-grid li.item { width: 230px; display: inline-block; margin: 20px 13px 0 0; position: relative; color:#fff !important; }
 .products-grid .product-image { display:block; width:230px; height:360px; }
 .products-grid .product-image { }
 .products-grid .product-name { display: none; } 
@@ -720,7 +734,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Regular price */
 .regular-price { display: none; }
-.product-image:hover .regular-price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; }
+.product-image:hover .regular-price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; border-top:2px solid #fff; }
 .regular-price .price { font-weight:bold; }
 
 /* Old price */
@@ -728,14 +742,14 @@ tr.summary-details-excluded { font-style:italic; }
 .old-price .price-label { display: none; }
 .old-price .price,.product-options-bottom .old-price .price { display: none; }
 .product-shop .old-price .price { display: block; font-size: 14px; font-weight: normal; text-decoration: line-through; margin-top: 7px; /* margin-left: 10px; */}
-.product-image:hover .old-price .price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; text-decoration:line-through; }
+.product-image:hover .old-price .price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; text-decoration:line-through; border-top:2px solid #fff; }
 
 /* Special price */
 .product-view .special-price { float:left; margin-right:10px; }
 .special-price .price-label { display: none; }
 .special-price .price,.product-options-bottom .special-price .price { display: none; }
 .product-shop .special-price .price { display: block; font-size: 20px; font-weight: normal; }
-.product-image:hover .special-price .price { margin: 0 0 5px; display: inline-block; font-weight: bold; font-size: 13px; color: #FFF; position: absolute; text-align: center; width: 230px; height: 179px; z-index: 1; line-height: 65px; bottom: -5px; }
+.product-image:hover .special-price .price { margin: 0 0 5px; display: inline-block; font-weight: bold; font-size: 13px; color: #FFF; position: absolute; text-align: center; width: 230px; height: 179px; z-index: 2; line-height: 65px; bottom: -5px; font-size:14px; }
 
 /* Minimal price (as low as) */
 .minimal-price {}
@@ -803,7 +817,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Add to Cart */
 .add-to-cart label { float:left; margin-right:5px; }
-.add-to-cart .qty { padding: 0px; float: left; width: 91px; height: 28px; text-align: center; font-size: 14px; border: 2px solid #6b6b6b; color: #6b6b6b; }
+.add-to-cart .qty { text-transform:uppercase; padding: 0px; float: left; width: 91px; height: 28px; text-align: center; font-size: 14px; border: 2px solid #6b6b6b; color: #6b6b6b; }
 .add-to-cart button.button { float: left; margin-left: 19px; background: #6b6b6b; border: none; color: #FFF; font-size: 19px; width: 132px; height: 32px; }
 .add-to-cart .paypal-logo { clear:left; text-align:right; }
 .add-to-cart .paypal-logo .paypal-or { clear:both; display:block; margin:5px 60px 5px 0; }
@@ -960,7 +974,7 @@ tr.summary-details-excluded { font-style:italic; }
 .cart-table .item-msg { font-size:10px; }
 
 /* Shopping Cart Collateral boxes */
-.cart .cart-collaterals { padding:25px 0 0; }
+.cart .cart-collaterals { padding:0 0 0; }
 .cart .cart-collaterals .col2-set { float:left; width:700px; }
 
 .cart .crosssell {}
@@ -1280,6 +1294,8 @@ tr.summary-details-excluded { font-style:italic; }
 .reset-pass .popup-content p { font-size:16px; color:#222; padding-left:20px; margin-bottom:20px; }
 .reset-pass .popup-content #reset-button { width:235px; }
 .reset-pass .popup-content #back-to-login { margin-left:13px; color:#b6b6b6; font-size:13px; }
+
+.cms-no-route .std h1 { padding:0; display:block; width:285px; font-size:22px; margin:40px auto; text-transform:uppercase; text-align:center; }
 /* ======================================================================================= */
 
 /* Clears ================================================================================ */

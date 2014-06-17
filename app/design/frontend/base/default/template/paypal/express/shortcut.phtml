@@ -31,13 +31,9 @@
 ?>
 <p class="paypal-logo">
 <?php $shortcutHtmlId = $this->getShortcutHtmlId() ?>
-<?php if ($this->isOrPositionBefore()): ?>
-    <span class="paypal-or"><?php echo $this->__('-OR-');?></span>
-<?php endif; ?>
-<a id="<?php echo $shortcutHtmlId ?>" href="<?php echo $this->getCheckoutUrl()?>"><img src="<?php echo $this->getImageUrl()?>" alt="<?php echo Mage::helper('paypal')->__('Checkout with PayPal');?>" title="<?php echo Mage::helper('paypal')->__('Checkout with PayPal');?>" /></a>
-<?php if ($this->isOrPositionAfter()): ?>
-    <span class="paypal-or"><?php echo $this->__('-OR-');?></span>
-<?php endif; ?>
+
+<button class="button dark continue-to-paypal" onclick="setLocation('<?php echo $this->getCheckoutUrl()?>')"><?php echo $this->__('CHECKOUT') ?></button>
+
 <?php if ($this->getConfirmationUrl() || $this->getIsInCatalogProduct()): ?>
 <?php if ($this->getIsInCatalogProduct()): ?>
     <input type="hidden" id="pp_checkout_url" name="return_url" value="" />

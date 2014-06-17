@@ -19,4 +19,6 @@
 		<script type="text/javascript">decorateList($('post-list'));</script>
 		<?php echo $this->getPagerHtml() ?>
 	</div>
+<?php else: ?>
+	<p class="no-products-message">No posts here yet</p>
 <?php endif; ?>
