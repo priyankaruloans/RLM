@@ -104,6 +104,19 @@ ul,ol         { list-style:none; }
     font-style: normal;
 
 }
+
+@font-face {
+    font-family: 'hyperegular';
+    src: url('hype-webfont.eot');
+    src: url('hype-webfont.eot?#iefix') format('embedded-opentype'),
+         url('hype-webfont.woff') format('woff'),
+         url('hype-webfont.ttf') format('truetype'),
+         url('hype-webfont.svg#hyperegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
 /* ======================================================================================= */
 
 /* Layout ================================================================================ */
@@ -887,7 +900,7 @@ tr.summary-details-excluded { font-style:italic; }
 .col1-layout .product-view .product-shop { float:right; width:700px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
 .product-view .product-name {}
-.product-view .short-description { margin-top: 31px; font-size: 30px; font-family: 'tall_filmsregular'; }
+.product-view .short-description { margin-top: 31px; font-size: 30px; font-family: 'hyperegular'; }
 
 /* Product Options */
 .product-options { margin:10px 0 0; }
@@ -1369,3 +1382,5 @@ tr.summary-details-excluded { font-style:italic; }
 .gift-messages-form .item:after,
 .send-friend .form-list li p:after { display:block; content:"."; clear:both; font-size:0; line-height:0; height:0; overflow:hidden; }
 /* ======================================================================================= */
+
+.logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
