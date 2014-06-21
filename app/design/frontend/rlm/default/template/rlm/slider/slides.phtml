@@ -5,12 +5,24 @@
  */
 ?>
 
+<style>
+    .sliderNav { position: absolute; width: 100%; z-index: 11; }
+    .btnSlide { background: url('media/arrows.svg'); height: 64px; background-size: 132px; display: inline-block; width: 64px; opacity: 0.5; }
+    .btnSlide:hover { opacity: 1; }
+    #nextSlide { background-position: 64px 0; float: right; margin-right: 25px; }
+    #prevSlide { margin-left: 25px; }
+</style>
+
 <div class="logo-large"></div>
 <ul class="slider">
     <?php foreach ($this->getSlides() as $slide): ?>
         <li><img src="<?php echo $this->getSlideUrl($slide); ?>" alt="<?php echo $slide->getTitle(); ?>" /></li>
     <?php endforeach; ?>
 </ul>
+<div class="sliderNav">
+    <a id="prevSlide" class="btnSlide" href="#"></a>
+    <a id="nextSlide" class="btnSlide" href="#"></a>
+</div>
 
 <script type="text/javascript">
 	logoInUse = false;
@@ -20,11 +32,15 @@
 
         var top = (jQuery(window).height()-130)/2;
         jQuery('.logo-large').css({'top' : top})
+        var top = (jQuery(window).height()-32)/2;
+        jQuery('.sliderNav').css({'top' : top})
     });
 
     jQuery(window).resize(function(){
         var top = (jQuery(window).height()-130)/2;
         jQuery('.logo-large').css({'top' : top })
+        var top = (jQuery(window).height()-32)/2;
+        jQuery('.sliderNav').css({'top' : top})
 		jQuery('.slider').children('li').each(function(){
 			jQuery(this).css({ 'width' : jQuery(window).width() })
 		})
@@ -40,4 +56,12 @@
     		})
     	}
     })
+
+    jQuery('.slider').cycle({ 
+        fx:     'scrollLeft', 
+        speed:  'slow', 
+        timeout: 0, 
+        next:   '#nextSlide', 
+        prev:   '#prevSlide' 
+    });
 </script>

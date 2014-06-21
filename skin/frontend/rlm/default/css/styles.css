@@ -781,7 +781,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-image:hover .old-price .price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; text-decoration:line-through; border-top:2px solid #fff; }
 
 /* Special price */
-.product-view .special-price { float:left; margin-right:10px; }
+.product-view .special-price { float:left; margin-right:10px; font-family: 'Open Sans', sans-serif; font-size: 14px; text-transform: uppercase; color: #303030; font-weight: 600; letter-spacing: 2px; word-spacing: 5px; font-style: italic; }
 .special-price .price-label { display: none; }
 .special-price .price,.product-options-bottom .special-price .price { display: none; }
 .product-shop .special-price .price { display: block; font-size: 20px; font-weight: normal; }
@@ -911,8 +911,8 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .product-shop { float:right; width:445px; }
 .col1-layout .product-view .product-shop { float:right; width:700px; }
 .col3-layout .product-view .product-shop { float:none; width:auto; }
-.product-view .product-name {}
-.product-view .short-description { margin-top: 31px; font-size: 30px; font-family: 'tall_dark_and_handsomeCn'; }
+.product-view .product-name h1 { font-family: 'Open Sans', sans-serif; font-size: 20px; text-transform: uppercase; color: #303030; font-weight: 600; letter-spacing: 2px; word-spacing: 5px; font-style: italic; }
+.product-view .short-description { margin-top: 31px; font-family: 'Open Sans', sans-serif; font-size: 12px; text-transform: uppercase; color: #303030; font-weight: 500; letter-spacing: 2px; word-spacing: 5px; }
 
 /* Product Options */
 .product-options { margin:10px 0 0; }
