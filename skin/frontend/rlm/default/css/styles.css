@@ -1398,7 +1398,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
 .rlm-about { }
-.rlm-logo { }
+.rlm-logo { background: transparent url('/rlm/skin/frontend/rlm/default/images/RLMlogo2014.svg') } 
 .rlm-content { }
 .rlm-content h2 { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; font-weight: 700; font-style: italic; text-transform: uppercase; }
 .rlm-content p { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; }
