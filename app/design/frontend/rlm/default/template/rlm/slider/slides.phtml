@@ -28,7 +28,13 @@
 	logoInUse = false;
 
     jQuery('document').ready(function() {
-        jQuery('.slider').cycle({fx: 'scrollLeft'});
+        jQuery('.slider').cycle({ 
+            fx:     'scrollHorz', 
+            speed:  'slow', 
+            timeout: 0, 
+            next:   '#nextSlide', 
+            prev:   '#prevSlide' 
+        });
 
         var top = (jQuery(window).height()-130)/2;
         jQuery('.logo-large').css({'top' : top})
@@ -56,12 +62,4 @@
     		})
     	}
     })
-
-    jQuery('.slider').cycle({ 
-        fx:     'scrollLeft', 
-        speed:  'slow', 
-        timeout: 0, 
-        next:   '#nextSlide', 
-        prev:   '#prevSlide' 
-    });
 </script>
