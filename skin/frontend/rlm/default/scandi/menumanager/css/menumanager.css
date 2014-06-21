@@ -23,7 +23,7 @@
 .menu-type-vertical ul { padding-left:15px; }
 
 /* Type : Horizontal */
-.menu-type-horizontal li a { color:#fff !important; text-transform:uppercase; }
+.menu-type-horizontal li a { color:#fff !important; text-transform:uppercase; font-family: 'Open Sans', sans-serif; font-weight: 600;}
 .menu-type-horizontal { position:relative; z-index:100; float:left; margin-left:88px; margin-top:18px; }
 .menu-type-horizontal li.level0 { display:inline; margin-right:32px; border-bottom: 4px solid transparent; }
 .menu-type-horizontal li.level0:hover { border-bottom-color:#fff; }

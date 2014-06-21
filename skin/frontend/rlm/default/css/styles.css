@@ -695,7 +695,7 @@ tr.summary-details-excluded { font-style:italic; }
 .products-grid .product-image { display:block; width:230px; height:360px; }
 .products-grid .product-image { }
 .products-grid .product-name { display: none; } 
-.products-grid .product-image:hover .product-name { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 325px; }
+.products-grid .product-image:hover .product-name { margin: 0 0 5px; font-family: 'Open Sans', sans-serif; text-transform: uppercase; font-weight: 600; font-style: italic; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 325px; }
 .products-grid .price-box { margin:5px 0; }
 .products-grid .availability { line-height:21px; }
 .products-grid .actions { position:absolute; bottom:12px; }
@@ -770,8 +770,8 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Regular price */
 .regular-price { display: none; }
-.product-image:hover .regular-price { margin: 0 0 5px; font-weight: bold; font-size: 13px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; border-top:2px solid #fff; }
-.regular-price .price { font-weight:bold; }
+.product-image:hover .regular-price { margin: 0 0 5px; font-size: 14px; color: #FFF; display: inline-block; position: absolute; text-align: center; width: 230px; height: 179px; background: rgba(0,0,0,.6); z-index: 1; line-height: 35px; bottom: -5px; border-top:2px solid #fff; font-style: italic; }
+.regular-price .price { }
 
 /* Old price */
 .old-price { }
@@ -785,7 +785,7 @@ tr.summary-details-excluded { font-style:italic; }
 .special-price .price-label { display: none; }
 .special-price .price,.product-options-bottom .special-price .price { display: none; }
 .product-shop .special-price .price { display: block; font-size: 20px; font-weight: normal; }
-.product-image:hover .special-price .price { margin: 0 0 5px; display: inline-block; font-weight: bold; font-size: 13px; color: #FFF; position: absolute; text-align: center; width: 230px; height: 179px; z-index: 2; line-height: 65px; bottom: -5px; font-size:14px; }
+.product-image:hover .special-price .price { margin: 0 0 5px; display: inline-block; color: #FFF; position: absolute; text-align: center; width: 230px; height: 179px; z-index: 2; line-height: 65px; bottom: -5px; font-size:14px; font-style: italic; }
 
 /* Minimal price (as low as) */
 .minimal-price {}
