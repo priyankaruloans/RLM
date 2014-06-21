@@ -1289,7 +1289,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Footer ================================================================================ */
 .footer-container { margin-top:20px; text-align:center; position:absolute; bottom:0; width:100%; min-width:1000px; }
-.footer { height:30px; background:#999999; z-index:10;  padding-top:7px; }
+.footer { height:30px; background:#4c4c4c; z-index:10;  padding-top:7px; }
 .footer ul { display:inline; }
 .footer ul a { color:#fff; font-size:17px; margin-left:25px; }
 .footer p { text-align:right; }
@@ -1397,3 +1397,8 @@ tr.summary-details-excluded { font-style:italic; }
 /* ======================================================================================= */
 
 .logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
+.rlm-about { }
+.rlm-logo { }
+.rlm-content { }
+.rlm-content h2 { }
+.rlm-content p { }
