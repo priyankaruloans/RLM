@@ -1400,5 +1400,5 @@ tr.summary-details-excluded { font-style:italic; }
 .rlm-about { }
 .rlm-logo { }
 .rlm-content { }
-.rlm-content h2 { }
-.rlm-content p { }
+.rlm-content h2 { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; font-weight: 700; font-style: italic; text-transform: uppercase; }
+.rlm-content p { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; }
