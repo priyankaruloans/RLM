@@ -22,7 +22,7 @@
 .post-meta { font-style: italic; display: none; }
 .post-entry { font-size: 110%; height: 1%; margin-bottom: 1.5em; overflow: hidden; font-size: 16px; }
 .post-entry-with-image { height: 1%; overflow: hidden; }
-.post-entry p { margin-bottom: 1em; color: #000;}
+.post-entry p { font-family: 'Open Sans', sans-serif; font-size: 12px; text-transform: uppercase; color: #303030; font-weight: 500; letter-spacing: 2px; word-spacing: 5px; }
 
 .featured-image {
 	border: 1px solid #ddd;
@@ -50,7 +50,7 @@
  */
 .post-list li.item { margin-top: 55px; text-align: center; }
 .post-list li.item .post-list-item { height: 1%; overflow: hidden; }
-.post-list h2 { line-height: 1em; margin-bottom: 1em; }
+.post-list h2 { line-height: 1em; margin-bottom: 1em; font-family: 'Open Sans', sans-serif; font-size: 16px; text-transform: uppercase; color: #303030; font-weight: 600; letter-spacing: 2px; word-spacing: 5px; font-style: italic;}
 .post-list h2 a:hover { font-weight: bold; color: #000;}
 
 /**

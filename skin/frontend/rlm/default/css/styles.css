@@ -875,7 +875,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-select-size-label label { font-weight: normal !important; }
 .product-select-size { display: inline-block; }
 
-.product-size { display: block; width: 36px; height: 28px; background: #FFF; text-align: center; line-height: 28px; }
+.product-size { display: block; width: 32px; height: 28px; background: #FFF; text-align: center; line-height: 28px; }
 
 .product-collateral .box-collateral { margin:0 0 15px; }
 
