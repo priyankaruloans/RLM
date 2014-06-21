@@ -879,7 +879,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .product-collateral .box-collateral { margin:0 0 15px; }
 
-.product-shop .regular-price .price { font-size: 20px; font-weight: normal; }
+.product-shop .regular-price .price { float:left; margin-right:10px; font-family: 'Open Sans', sans-serif; font-size: 14px; text-transform: uppercase; color: #303030; font-weight: 600; letter-spacing: 2px; word-spacing: 5px; font-style: italic; }
 
 /* Product Images */
 .product-view .product-img-box { float:left; width:474px; }
