@@ -5,18 +5,10 @@
  */
 ?>
 
-<style>
-    .sliderNav { position: absolute; width: 100%; z-index: 11; }
-    .btnSlide { background: url('media/arrows.svg'); height: 64px; background-size: 132px; display: inline-block; width: 64px; opacity: 0.5; }
-    .btnSlide:hover { opacity: 1; }
-    #nextSlide { background-position: 64px 0; float: right; margin-right: 25px; }
-    #prevSlide { margin-left: 25px; }
-</style>
-
 <div class="logo-large"></div>
 <ul class="slider">
     <?php foreach ($this->getSlides() as $slide): ?>
-        <li><img src="<?php echo $this->getSlideUrl($slide); ?>" alt="<?php echo $slide->getTitle(); ?>" /></li>
+        <li style="background:url('<?php echo $this->getSlideUrl($slide); ?>');"></li>
     <?php endforeach; ?>
 </ul>
 <div class="sliderNav">

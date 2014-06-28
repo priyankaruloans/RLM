@@ -71,7 +71,8 @@ class RLM_Slider_Adminhtml_SliderController
             try {
                 if(isset($_FILES['image']['name']) && $_FILES['image']['name'] != '') {
                     $uploader = new Varien_File_Uploader('image');
-                    $newName = strtotime(date('Y-m-d h:m:s')) . base64_encode($_FILES['image']['name']);
+                    $ext = pathinfo($_FILES['image']['name'], PATHINFO_EXTENSION);
+                    $newName = strtotime(date('Y-m-d h:m:s')) . ($_FILES['image']['name']);
                     $_FILES['image']['name'] = $newName;
                     $model->setImage($newName);
 
