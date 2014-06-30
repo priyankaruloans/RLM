@@ -28,10 +28,15 @@ class RLM_Slider_Block_Adminhtml_Slides_Edit_Form
             'name'      => 'title'
         ));
 
+        $general->addField('video_url', 'text', array(
+            'label'     => Mage::helper('rlm_slider')->__('Video Embed Code'),
+            'required'  => false,
+            'name'      => 'video_url'
+        ));
+
         $general->addField('image', 'image', array(
             'label'     => Mage::helper('rlm_slider')->__('Image'),
-            'class'     => 'required-entry',
-            'required'  => true,
+            'required'  => false,
             'name'      => 'image'
         ));
 

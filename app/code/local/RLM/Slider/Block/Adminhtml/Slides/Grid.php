@@ -37,6 +37,12 @@ class RLM_Slider_Block_Adminhtml_Slides_Grid
             'filter'   => false,
             'renderer' => 'RLM_Slider_Block_Adminhtml_Slides_Renderer_Image'
         ));
+
+        $this->addColumn('video_url', array(
+            'header'   => Mage::helper('rlm_slider')->__('Video Url'),
+            'index'    => 'video_url',
+            'width'    => '500px',
+        ));
     }
 
     public function getRowUrl($row)

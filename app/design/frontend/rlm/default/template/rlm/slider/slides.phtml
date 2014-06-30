@@ -8,7 +8,12 @@
 <div class="logo-large"></div>
 <ul class="slider">
     <?php foreach ($this->getSlides() as $slide): ?>
-        <li style="background:url('<?php echo $this->getSlideUrl($slide); ?>');"></li>
+        <li style="background:url('<?php echo $this->getSlideUrl($slide); ?>');">
+        <?php $videoUrl = $slide->getVideoUrl(); ?>
+        <?php if (!empty($videoUrl)): ?>
+        <iframe style="width:100%; height:100%;" frameborder="0" src="<?php echo $videoUrl ?>"></iframe>
+        <?php endif ?>
+    </li>
     <?php endforeach; ?>
 </ul>
 <div class="sliderNav">
@@ -17,9 +22,11 @@
 </div>
 
 <script type="text/javascript">
-	logoInUse = false;
+    logoInUse = animating = false;
 
     jQuery('document').ready(function() {
+        jQuery('.btnSlide').animate({opacity:0}, 5000, function () { animating = false; })
+
         jQuery('.slider').cycle({ 
             fx:     'scrollHorz', 
             speed:  'slow', 
@@ -29,9 +36,21 @@
         });
 
         var top = (jQuery(window).height()-130)/2;
-        jQuery('.logo-large').css({'top' : top})
+        jQuery('.logo-large').css({'top' : top});
         var top = (jQuery(window).height()-64)/2;
-        jQuery('.sliderNav').css({'top' : top})
+        jQuery('.sliderNav').css({'top' : top});
+
+        jQuery(window).mousemove(function () {
+            if (animating) {
+                return;
+            }
+            animating = true;
+            jQuery('.btnSlide').animate({
+               opacity:1
+            }, 1000).delay(3000).animate({
+                opacity:0
+            }, 1000, function () { animating = false })
+        });
     });
 
     jQuery(window).resize(function(){
@@ -39,19 +58,19 @@
         jQuery('.logo-large').css({'top' : top })
         var top = (jQuery(window).height()-64)/2;
         jQuery('.sliderNav').css({'top' : top})
-		jQuery('.slider').children('li').each(function(){
-			jQuery(this).css({ 'width' : jQuery(window).width() })
-		})
+        jQuery('.slider').children('li').each(function(){
+            jQuery(this).css({ 'width' : jQuery(window).width() })
+        })
     })
 
     jQuery('.logo-large').on('mouseenter', function(){
-    	if (logoInUse == false){
-    		logoInUse = true;
-    		jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
-    			jQuery(this).animate({ 'opacity': "0"}, 2000,function(){
-    				logoInUse = false;
-    			})
-    		})
-    	}
+        if (logoInUse == false){
+            logoInUse = true;
+            jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
+                jQuery(this).animate({ 'opacity': "0"}, 2000,function(){
+                    logoInUse = false;
+                })
+            })
+        }
     })
 </script>
