@@ -7,7 +7,7 @@
 * { margin:0; padding:0; }
 
 html          { height:100%; }
-body          { min-height:100%; position:relative; }
+body          { /* min-height:100%; */ position:relative; }
 body          { background:#fff; font:14px/1.35 Asap, Helvetica, sans-serif; color:#707070; text-align:center; }
 
 img           { border:0; vertical-align:top; }
@@ -866,7 +866,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-box .add-to-links { float:left; }
 
 
-.product-view {}
+.product-view { margin-top: 85px; }
 
 .product-essential { width: 920px; color: #000;}
 .product-essential .regular-price { display: block; }
@@ -897,7 +897,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 .more-views { width: 100px; display: inline-block; }
 .more-views ul { }
-.more-views li { width: 100px; height: 100px; margin-bottom: 20px; }
+.more-views li { width: 100px; height: 100px; margin-bottom: 20px; position: relative; top: 13px; }
 .more-views li a { }
 .more-views li a img { width: 100px; height: 100px; }
 
