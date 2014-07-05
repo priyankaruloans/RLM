@@ -947,7 +947,7 @@ tr.summary-details-excluded { font-style:italic; }
 .product-view .box-description { display: none; }
 
 /* Block: Additional */
-.product-view .box-additional {}
+.product-view .box-additional { display: none; }
 
 /* Block: Upsell */
 .product-view .box-up-sell {}
