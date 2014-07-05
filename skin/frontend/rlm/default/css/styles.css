@@ -508,7 +508,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Header ================================================================================ */
 .logo { float:left; margin-left:35px; margin-top:3px; }
-.header-container { background:#4c4c4c; color:#fff; height:57px;  }
+.header-container { background-color: rgba(0, 0, 0, 0.80); border-bottom: solid 1px rgba(187, 187, 187, 0.75); color:#fff; height:57px; position: fixed; top: 0; width: 100%; z-index: 99999999999999999999; }
 .header {  }
 .header .logo { float:left; text-decoration:none !important; }
 .header .logo strong { position:absolute; top:-999em; left:-999em; width:0; height:0; font-size:0; line-height:0; text-indent:-999em; overflow:hidden; }
@@ -686,7 +686,7 @@ tr.summary-details-excluded { font-style:italic; }
 .category-image { width:100%; overflow:hidden; margin:0 0 10px; text-align:center; }
 .category-image img {}
 .category-description { margin:0 0 10px; }
-.category-products { margin-top: 35px; }
+.category-products { margin-top: 85px; }
 
 /* View Type: Grid */
 .products-grid { border-bottom:0; position:relative; }
@@ -1289,7 +1289,7 @@ tr.summary-details-excluded { font-style:italic; }
 
 /* Footer ================================================================================ */
 .footer-container { margin-top:20px; text-align:center; position:absolute; bottom:0; width:100%; min-width:1000px; }
-.footer { height:30px; background:#4c4c4c; z-index:10;  padding-top:7px; }
+.footer { height:30px; background-color: rgba(0, 0, 0, 0.80); border-top: solid 1px rgba(187, 187, 187, 0.75); z-index:10;  padding-top:7px; }
 .footer ul { display:inline; }
 .footer ul a { color:#fff; font-size:17px; margin-left:25px; }
 .footer p { text-align:right; }
@@ -1399,6 +1399,6 @@ tr.summary-details-excluded { font-style:italic; }
 .logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
 .rlm-about { }
 .rlm-logo { background: transparent url('/rlm/skin/frontend/rlm/default/images/RLMlogo2014.svg') ; height: 100px; background-size: 100px; background-repeat: no-repeat; background-position: center; margin: 30px;} 
-.rlm-content { }
+.rlm-content { width: 800px; margin: 0 auto; border-top: 1px solid black; border-bottom: 1px solid black; box-sizing: border-box; padding: 0 15px; height: 400px; overflow: hidden; }
 .rlm-content h2 { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; font-weight: 700; font-style: italic; text-transform: uppercase; }
 .rlm-content p { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; }

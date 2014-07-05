@@ -7,7 +7,7 @@
 
 .ias_trigger a:link,
 .ias_trigger a:visited {
-    background-color: #6b6b6b;
+    background-color: rgba(0,0,0,0.8);
     border: none;
     font: bold 12px Arial, sans-serif;
     color: #FFF;

@@ -41,6 +41,6 @@
 .menu-type-horizontal ul li a { padding:2px 10px; display:block; text-transform:uppercase; }
 .menu-type-horizontal ul li.last {}
 .menu-type-horizontal li.level1 ul { left:50%; top:70%; }
-.menu-type-horizontal li:hover > ul { display:block; padding-top:7px; }
+.menu-type-horizontal li:hover > ul { display:block; padding-top:7px; left: -20px; }
 
 .my-account { margin-left: 3px; border-left: 2px solid #fff; padding-left: 34px; }
