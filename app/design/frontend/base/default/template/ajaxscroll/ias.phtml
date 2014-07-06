@@ -46,7 +46,9 @@ jQuery.ias({
 <?php endif; ?>
 <?php if ($useUitotop): ?>
 jQuery(document).ready(function() {
-	jQuery().UItoTop({ easingType: 'easeOutQuart' });		
+	jQuery().UItoTop({ easingType: 'easeOutQuart' });
+	console.log (jQuery(document).height());
+	console.log (jQuery(window).height());
 });
 <?php endif; ?>
 </script>

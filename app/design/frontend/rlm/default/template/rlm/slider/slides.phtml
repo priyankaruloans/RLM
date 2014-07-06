@@ -27,6 +27,17 @@
     jQuery('document').ready(function() {
         jQuery('.btnSlide').animate({opacity:0}, 5000, function () { animating = false; })
 
+        jQuery('.header-container').animate({ opacity: 0 }, 5000, function(){
+            jQuery('.show-menu').animate({ top: 0 }, 500)
+            jQuery(this).css({ 'opacity' : '1', 'top' : '-100px'})
+        })
+
+        jQuery('.header-container').on('mouseover', function(){
+            if (jQuery(this).css('opacity') < 1){
+                jQuery('.header-container').stop().css('opacity', '1');
+            }
+        })
+
         jQuery('.slider').cycle({ 
             fx:     'scrollHorz', 
             speed:  'slow', 
