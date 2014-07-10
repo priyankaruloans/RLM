@@ -2,6 +2,7 @@
 .main { width:auto; margin:0; }
 
 .cms-home .subtitle {}
+.cms-index-index { padding-top:0; top:0; } 
 .cms-index-index .subtitle {}
 .cms-index-index .header-container { background:rgba(0,0,0, 0.4); position:absolute; z-index:99999; left:0; width:100%; }
 
