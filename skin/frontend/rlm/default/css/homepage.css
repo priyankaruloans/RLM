@@ -7,7 +7,7 @@
 .cms-index-index .header-container { background:rgba(0,0,0, 0.4); position:absolute; z-index:99999; left:0; width:100%; }
 
 .hide-button { background:url('../images/hide-menu.png'); position:absolute; right:10px; top:13px; display:block; height:32px; width:32px; }
-.show-menu { z-index:99999; background:url('../images/show-menu.png'); display:block; position:absolute; right:0; top:-100px; width:50px; height:50px; }
+.show-menu { z-index:99999; background:url('../images/show-menu.png'); display:block; position:absolute; left:0; top:-100px; width:50px; height:50px; }
 
 .menu-type-horizontal ul { background:rgba(0,0,0, 0.4); }
 
