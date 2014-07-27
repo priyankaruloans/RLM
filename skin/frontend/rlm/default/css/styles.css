@@ -873,8 +873,7 @@ tr.summary-details-excluded { font-style:italic; }
 .add-to-box .or { float:left; margin:0 10px; display:none; }
 .add-to-box .add-to-links { float:left; }
 
-
-.product-view { margin-top: 20px; }
+.product-view { }
 
 .product-essential { width: 920px; color: #000;}
 .product-essential .regular-price { display: block; }
@@ -1417,7 +1416,8 @@ background-size: 53px; }
 
 .logo-large { background: transparent url('/rlm/skin/frontend/rlm/default/images/logo-large.png') no-repeat center; height: 131px; width: 100%; position: absolute; z-index: 10; opacity: 0; background-size: 540px; } 
 .rlm-about { }
-.rlm-logo { background: transparent url('/rlm/skin/frontend/rlm/default/images/RLMlogo2014.svg') ; height: 100px; background-size: 100px; background-repeat: no-repeat; background-position: center; margin: 30px;} 
+.rlm-logo { background: transparent url('/rlm/skin/frontend/rlm/default/images/RLMlogo2014.svg') ; height: 100px; background-size: 100px; background-repeat: no-repeat; background-position: center; margin: 60px 70px 10px; } 
 .rlm-content { width: 800px; margin: 0 auto; border-top: 1px solid black; border-bottom: 1px solid black; box-sizing: border-box; padding: 0 15px; height: 400px; overflow: hidden; }
 .rlm-content h2 { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; font-weight: 700; font-style: italic; text-transform: uppercase; }
 .rlm-content p { font-family: 'Open Sans', sans-serif; font-size: 14px; word-spacing: 2px; }
+.blog-home { margin-top: 100px; }
