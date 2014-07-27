@@ -8,8 +8,8 @@
 <div class="logo-large"></div>
 <ul class="slider">
     <?php foreach ($this->getSlides() as $slide): ?>
-        <li style="background:url('<?php echo $this->getSlideUrl($slide); ?>');">
         <?php $videoUrl = $slide->getVideoUrl(); ?>
+        <li <?php if (!empty($videoUrl)): ?>class="video"<?php endif ?> style="background:url('<?php echo $this->getSlideUrl($slide); ?>');">
         <?php if (!empty($videoUrl)): ?>
         <iframe style="width:100%; height:100%;" frameborder="0" src="<?php echo $videoUrl ?>"></iframe>
         <?php endif ?>
@@ -75,7 +75,6 @@
     })
 
     jQuery('.logo-large').on('mouseenter', function(){
-        console.log (jQuery('.slider li').eq(0));
         if (logoInUse == false){
             logoInUse = true;
             jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
