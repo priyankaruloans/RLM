@@ -111,7 +111,12 @@ jQuery('document').ready(function () {
 
     jQuery('.instagram').click(function () {
         var links = jQuery('.insta-links');
-
-        links.toggle();
+        var x = 1;
+        var y = 2500;
+        if (links.css('opacity') > 0){
+            x = 0;
+            y = 1500;
+        }
+        links.animate({ opacity: x }, y)
     });
 });

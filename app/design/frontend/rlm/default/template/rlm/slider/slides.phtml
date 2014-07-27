@@ -75,6 +75,7 @@
     })
 
     jQuery('.logo-large').on('mouseenter', function(){
+        console.log (jQuery('.slider li').eq(0));
         if (logoInUse == false){
             logoInUse = true;
             jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
