@@ -75,7 +75,7 @@
     })
 
     jQuery('.logo-large').on('mouseenter', function(){
-        if (logoInUse == false){
+        if (logoInUse == false && !jQuery('.slider').children('li.video:visible')){
             logoInUse = true;
             jQuery(this).animate({ 'opacity': "1"}, 2500,function(){
                 jQuery(this).animate({ 'opacity': "0"}, 2000,function(){
