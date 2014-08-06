@@ -121,7 +121,6 @@ jQuery('document').ready(function () {
         }
         links.animate({ opacity : x}, y, function(){
             links.css('display', z)
-            alert(z)
         })
     });
 });
