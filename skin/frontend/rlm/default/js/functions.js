@@ -113,10 +113,15 @@ jQuery('document').ready(function () {
         var links = jQuery('.insta-links');
         var x = 1;
         var y = 2500;
+        var z = 'block'
         if (links.css('opacity') > 0){
             x = 0;
             y = 1500;
+            z = 'none'
         }
-        links.animate({ opacity: x }, y)
+        links.animate({ opacity : x}, y, function(){
+            links.css('display', z)
+            alert(z)
+        })
     });
 });
